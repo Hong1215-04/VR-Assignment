@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Stain : MonoBehaviour
 {
-    public Material[] stainMaterials; // Array to store the materials (in different opacity)
-    public int cleaningSteps = 3; // Total cleaning steps to remove the stain
+    [SerializeField] private Material[] stainMaterials; // Array to store the materials (in different opacity)
+    [SerializeField] private int cleaningSteps = 3; // Total cleaning steps to remove the stain
     private int currentStep = 0; // Tracks the current cleaning step
 
     private Renderer stainRenderer; // Reference to the Renderer component
@@ -13,7 +13,7 @@ public class Stain : MonoBehaviour
         // Get the Renderer component of the stain
         stainRenderer = GetComponent<Renderer>();
 
-        // Ensure the initial material is set to the first in the array
+        // Ensure the initial material set to first material in the array
         if (stainMaterials.Length > 0)
         {
             stainRenderer.material = stainMaterials[0];
