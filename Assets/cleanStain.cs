@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Stain : MonoBehaviour
@@ -28,8 +30,9 @@ public class Stain : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the interacting object is the cleaning tool
-        if (other.CompareTag("CleaningTool"))
+        if (other.tag.Equals("CleaningTool"))
         {
+
             // Increment the cleaning step
             currentStep++;
 
@@ -40,7 +43,6 @@ public class Stain : MonoBehaviour
             }
             else if (currentStep >= cleaningSteps)
             {
-                // Destroy the stain once cleaning is complete
                 Destroy(gameObject);
             }
         }
