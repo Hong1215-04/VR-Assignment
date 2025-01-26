@@ -7,14 +7,17 @@ TagManager:
   - CleaningTool
   - Anchor
   - Stain
+  - TrashBin
+  - Trash
+  - Anchor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Door
   - Water
   - UI
-  - 
+  - Non_Interactables
   - 
   - 
   - 
