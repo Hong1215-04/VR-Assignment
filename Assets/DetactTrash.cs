@@ -1,18 +1,37 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 
 public class DetactTrash : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TMP_Text txt_task;
+
+    private GameObject trash;
+    private int task = 15;
+
+    private void Start()
     {
-        
+        txt_task.SetText("Task Remaining: " + task.ToString());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider collider)
     {
-        
+        UnityEngine.Debug.Log(collider.tag);
+        if (collider.CompareTag("Trash"))
+        {
+            UnityEngine.Debug.Log("yes");
+            trash = collider.gameObject;
+            task = task - 1;
+            txt_task.SetText("Task Remaining: " + task.ToString());
+            StartCoroutine (destroyTrash());
+        }
+    }
+
+    private IEnumerator destroyTrash()
+    {
+        yield return new WaitForSeconds(5);
+
+        Destroy(trash);
     }
 }
