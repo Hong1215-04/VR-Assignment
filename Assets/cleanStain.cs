@@ -27,10 +27,10 @@ public class Stain : MonoBehaviour
     }
 
     // When interact with stain
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collider)
     {
         // Check if the interacting object is the cleaning tool
-        if (other.tag.Equals("CleaningTool"))
+        if (collider.tag.Equals("CleaningTool"))
         {
 
             // Increment the cleaning step
