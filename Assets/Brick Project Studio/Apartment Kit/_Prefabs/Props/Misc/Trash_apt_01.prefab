@@ -392,6 +392,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1885287317899279198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219608574416880701}
+  m_Layer: 0
+  m_Name: BinBagSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219608574416880701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885287317899279198}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5419998, y: 0.708, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318376357991106276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2852570186375467720
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +586,7 @@ Transform:
   - {fileID: 4350452353968257985}
   - {fileID: 1753872377346547600}
   - {fileID: 6694325704258883739}
+  - {fileID: 219608574416880701}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3719604133596847529
@@ -681,19 +713,7 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5099763727980213348}
-        m_TargetAssemblyTypeName: ProgressBar, Assembly-CSharp
-        m_MethodName: ResetCurrent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -711,7 +731,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5099763727980213348}
+        m_TargetAssemblyTypeName: ProgressBar, Assembly-CSharp
+        m_MethodName: ResetCurrent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -1246,6 +1278,14 @@ PrefabInstance:
       propertyPath: outline
       value: 
       objectReference: {fileID: 1877730375309077819}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: trash_spawnPoint
+      value: 
+      objectReference: {fileID: 219608574416880701}
+    - target: {fileID: 1056870807566547684, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4412886027506964180, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1325,6 +1365,22 @@ PrefabInstance:
     - target: {fileID: 4412886027506964180, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726529638409365199, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726529638409365199, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851287289288093389, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851287289288093389, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5999882718372440913, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: m_Name

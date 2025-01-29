@@ -8,7 +8,8 @@ public class PlayerDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Player")){
+        if (collider.CompareTag("Player"))
+        {
             canvas.SetActive(true);
         }
     }
