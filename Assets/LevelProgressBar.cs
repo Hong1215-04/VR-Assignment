@@ -1,0 +1,58 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class LevelProgressBar : MonoBehaviour
+{
+    private Slider progressBar; // Reference to the slider component
+    private TextMeshProUGUI progressText; // Reference to the TextMeshPro component
+
+    void Start()
+    {
+        // Get the slider component attached to the same GameObject
+        progressBar = GetComponent<Slider>();
+        // Get the TextMeshPro component from the child GameObject
+        progressText = GetComponentInChildren<TextMeshProUGUI>();
+
+        if (GameProgressManager.Instance != null)
+        {
+            // Subscribe to progress update and level completion events
+            GameProgressManager.Instance.OnProgressUpdated += UpdateProgress;
+            GameProgressManager.Instance.OnLevelCompleted += ShowLevelCompleted;
+            InitializeProgressBar(); // Initialize the progress bar at the start
+        }
+        else
+        {
+            Debug.LogError("GameProgressManager not found in the scene!");
+        }
+    }
+
+    void InitializeProgressBar()
+    {
+        if (GameProgressManager.Instance != null)
+        {
+            // Set progress bar max value and current value
+            progressBar.maxValue = GameProgressManager.Instance.GetTotalTargets();
+            progressBar.value = GameProgressManager.Instance.GetCurrentProgress();
+            // Set initial progress text
+            progressText.text = $"{GameProgressManager.Instance.GetCurrentProgress()}/{GameProgressManager.Instance.GetTotalTargets()}";
+        }
+    }
+
+    void UpdateProgress()
+    {
+        if (progressBar != null && GameProgressManager.Instance != null)
+        {
+            // Update progress bar value
+            progressBar.value = GameProgressManager.Instance.GetCurrentProgress();
+            // Update progress text with current counts
+            progressText.text = $"{GameProgressManager.Instance.GetCurrentProgress()}/{GameProgressManager.Instance.GetTotalTargets()}";
+        }
+    }
+
+    void ShowLevelCompleted()
+    {
+        // Display level completion text
+        progressText.text = "Level Completed";
+    }
+}

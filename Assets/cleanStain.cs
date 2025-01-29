@@ -1,48 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Stain : MonoBehaviour
 {
-    [SerializeField] private Material[] stainMaterials; // Array to store the materials (in different opacity)
-    [SerializeField] private int cleaningSteps = 3; // Total cleaning steps to remove the stain
-    private int currentStep = 0; // Tracks the current cleaning step
-
-    private Renderer stainRenderer; // Reference to the Renderer component
+    [SerializeField] private Material[] stainMaterials;
+    [SerializeField] private int cleaningSteps = 3;
+    private int currentStep = 0;
+    private Renderer stainRenderer;
 
     void Start()
     {
-        // Get the Renderer component of the stain
         stainRenderer = GetComponent<Renderer>();
-
-        // Ensure the initial material set to first material in the array
         if (stainMaterials.Length > 0)
-        {
             stainRenderer.material = stainMaterials[0];
-        }
         else
-        {
             Debug.LogError("Stain materials not assigned!");
-        }
     }
 
-    // When interact with stain
     void OnTriggerEnter(Collider collider)
     {
-        // Check if the interacting object is the cleaning tool
         if (collider.tag.Equals("CleaningTool"))
         {
-
-            // Increment the cleaning step
             currentStep++;
 
-            // Update the stain material based on the current step
             if (currentStep < cleaningSteps && currentStep < stainMaterials.Length)
             {
                 stainRenderer.material = stainMaterials[currentStep];
             }
             else if (currentStep >= cleaningSteps)
             {
+                // **清理完成，通知 GameProgressManager**
+                GameProgressManager.Instance.CleanStain();
+
                 Destroy(gameObject);
             }
         }
