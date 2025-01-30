@@ -10,6 +10,7 @@ TagManager:
   - TrashBin
   - Trash
   - Anchor
+  - BinBag
   layers:
   - Default
   - TransparentFX
