@@ -303099,6 +303099,22 @@ PrefabInstance:
       propertyPath: txt_task
       value: 
       objectReference: {fileID: 1920293541}
+    - target: {fileID: 4722877607571192174, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722877607571192174, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_Limits.max
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722877607571192174, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.9299688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722877607571192174, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.92372215
+      objectReference: {fileID: 0}
     - target: {fileID: 7229859590545479806, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
       propertyPath: m_Camera
       value: 
@@ -303146,6 +303162,14 @@ PrefabInstance:
     - target: {fileID: 8259686668363545803, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
       propertyPath: m_Name
       value: Trashbin
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222068998283750638, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222068998283750638, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+      propertyPath: m_MatchAttachRotation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

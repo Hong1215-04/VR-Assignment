@@ -12,6 +12,7 @@ public class PlayerDetection_L : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             canvas.SetActive(true);
+            GetComponentInParent<XRGrabInteractable>().enabled = true;
         }
     }
 
@@ -20,6 +21,7 @@ public class PlayerDetection_L : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             canvas.SetActive(false);
+            GetComponentInParent<XRGrabInteractable>().enabled = false;
         }
     }
 }
