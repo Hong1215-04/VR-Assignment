@@ -11,11 +11,11 @@ public class GameProgressManager : MonoBehaviour
 
     private int totalStains; // Total number of stains in the scene
     private int totalTrash; // Total number of trash items in the scene
+    private int totalAI; // Total number of AI items in the scene
+    private int progressTrashUnits; // Number of trash units contributing to progress
     private int cleanedStains = 0; // Counter for cleaned stains
     private int cleanedTrash = 0; // Counter for cleaned trash
-
-    private int trashBinCapacity = 5; // Capacity of the trash bin
-    private int currentTrashInBin = 0; // Current number of trash items in the bin
+    private int cleanedAI = 0; // Counter for cleaned AI
 
     public delegate void ProgressUpdated(); // Delegate for progress update event
     public event ProgressUpdated OnProgressUpdated; // Event triggered on progress update
@@ -36,6 +36,7 @@ public class GameProgressManager : MonoBehaviour
 
         InitializeStainCount(); // Initialize stain count at the start
         InitializeTrashCount(); // Initialize trash count at the start
+        InitializeAICount(); // Initialize AI count at the start
     }
 
     void Start()
@@ -62,21 +63,36 @@ public class GameProgressManager : MonoBehaviour
         {
             Debug.LogWarning("No trash found in the scene! Check if trash has been instantiated.");
         }
+        else
+        {
+            // Calculate the number of trash units contributing to progress
+            progressTrashUnits = Mathf.CeilToInt((float)totalTrash / 5);
+        }
+    }
+
+    void InitializeAICount()
+    {
+        // Find all game objects with the tag "AI" and count them
+        totalAI = GameObject.FindGameObjectsWithTag("AI").Length;
+        if (totalAI == 0)
+        {
+            Debug.LogWarning("No AI found in the scene! Check if AI objects have been instantiated.");
+        }
     }
 
     void InitializeProgressBar()
     {
         if (progressBar != null)
         {
-            // Set progress bar max value to the total number of tasks (stains + trash)
-            progressBar.maxValue = totalStains + totalTrash;
+            // Set progress bar max value to the total number of tasks (stains + progress trash units + AI)
+            progressBar.maxValue = totalStains + progressTrashUnits + totalAI;
             progressBar.value = 0; // Initialize progress bar value to 0
         }
 
         if (progressText != null)
         {
             // Set initial progress text
-            progressText.text = $"0/{totalStains + totalTrash}";
+            progressText.text = $"0/{totalStains + progressTrashUnits + totalAI}";
         }
     }
 
@@ -88,24 +104,14 @@ public class GameProgressManager : MonoBehaviour
 
     public void CleanTrash()
     {
+        // Handle trash cleaning via DetactTrash
         cleanedTrash++; // Increment cleaned trash count
-        currentTrashInBin++; // Increment current trash in bin
-
-        // Check if trash bin is full
-        if (currentTrashInBin >= trashBinCapacity)
-        {
-            CreateTrashBag(); // Create a new trash bag
-            currentTrashInBin = 0; // Reset trash bin count
-        }
-
         UpdateProgress(); // Update the progress bar and text
     }
 
-    void CreateTrashBag()
+    public void CleanAI()
     {
-        // Logic for creating a trash bag
-        Debug.Log("Trash bin is full! Creating a trash bag.");
-        totalTrash++; // Increase total trash count to account for the new trash bag
+        cleanedAI++; // Increment cleaned AI count
         UpdateProgress(); // Update the progress bar and text
     }
 
@@ -114,13 +120,13 @@ public class GameProgressManager : MonoBehaviour
         if (progressBar != null)
         {
             // Update progress bar value
-            progressBar.value = cleanedStains + cleanedTrash;
+            progressBar.value = cleanedStains + cleanedTrash + cleanedAI;
         }
 
         if (progressText != null)
         {
             // Check if all tasks are completed
-            if (cleanedStains + cleanedTrash == progressBar.maxValue)
+            if (cleanedStains + cleanedTrash + cleanedAI == progressBar.maxValue)
             {
                 progressText.text = "Level Completed"; // Display level completion text
                 OnLevelCompleted?.Invoke(); // Trigger level completion event
@@ -128,7 +134,7 @@ public class GameProgressManager : MonoBehaviour
             else
             {
                 // Update progress text with current counts
-                progressText.text = $"{cleanedStains + cleanedTrash}/{totalStains + totalTrash}";
+                progressText.text = $"{cleanedStains + cleanedTrash + cleanedAI}/{totalStains + progressTrashUnits + totalAI}";
             }
         }
 
@@ -137,11 +143,11 @@ public class GameProgressManager : MonoBehaviour
 
     public int GetCurrentProgress()
     {
-        return cleanedStains + cleanedTrash; // Return current progress
+        return cleanedStains + cleanedTrash + cleanedAI; // Return current progress
     }
 
     public int GetTotalTargets()
     {
-        return totalStains + totalTrash; // Return total number of targets
+        return totalStains + progressTrashUnits + totalAI; // Return total number of targets
     }
 }

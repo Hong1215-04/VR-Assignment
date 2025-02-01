@@ -18,13 +18,15 @@ public class DetactTrash : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         UnityEngine.Debug.Log(collider.tag);
-        if (collider.CompareTag("Trash"))
+        if (collider.CompareTag("BinBag"))
         {
             UnityEngine.Debug.Log("yes");
             trash = collider.gameObject;
             task = task - 1;
             txt_task.SetText("Task Remaining: " + task.ToString());
             StartCoroutine (destroyTrash());
+
+            GameProgressManager.Instance.CleanTrash();
         }
     }
 
