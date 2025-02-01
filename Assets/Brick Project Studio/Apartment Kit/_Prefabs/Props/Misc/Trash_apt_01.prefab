@@ -575,8 +575,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1540320948776308890}
   - {fileID: 5504616994129334374}
@@ -1158,8 +1158,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26055527, y: 0.106600404, z: 0.3562112}
-  m_Center: {x: 0.0011577606, y: 0.38566333, z: 0.004994154}
+  m_Size: {x: 0.26055527, y: 0.21481955, z: 0.31209183}
+  m_Center: {x: 0.0011577606, y: 0.33155376, z: 0.0023469925}
 --- !u!54 &7605655395940495588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1279,9 +1279,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1877730375309077819}
     - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: trash.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: trash_spawnPoint
       value: 
       objectReference: {fileID: 219608574416880701}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: trash.Array.data[0]
+      value: 
+      objectReference: {fileID: 4741090904412136131, guid: 35be2a7d2483a984e8e9d6714fd3d33f, type: 3}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: trash.Array.data[1]
+      value: 
+      objectReference: {fileID: 9069675893589349673, guid: 679550d3e46157a4ca6f4379f33f867e, type: 3}
     - target: {fileID: 1056870807566547684, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: m_FillAmount
       value: 0

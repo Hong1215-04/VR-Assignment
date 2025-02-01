@@ -10,14 +10,15 @@ TagManager:
   - TrashBin
   - Trash
   - Anchor
+  - BinBag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Door
+  - 
   - Water
   - UI
-  - Non_Interactables
+  - 
   - 
   - 
   - 

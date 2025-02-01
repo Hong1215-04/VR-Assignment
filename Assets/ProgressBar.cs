@@ -12,7 +12,7 @@ public class ProgressBar : MonoBehaviour
     public Image fill;
     public Image outline;
     public GameObject canvas;
-    public GameObject trash;
+    public GameObject[] trash;
     public Transform trash_spawnPoint;
 
     // Update is called once per frame
@@ -52,7 +52,8 @@ public class ProgressBar : MonoBehaviour
     {
         if (current == max)
         {
-            Instantiate(trash, trash_spawnPoint.position, Quaternion.identity);
+            int index = Random.Range(0, trash.Length);
+            Instantiate(trash[index], trash_spawnPoint.position, Quaternion.identity);
             current = 0;
             fill.color = Color.white;
             outline.color = Color.white;
