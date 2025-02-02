@@ -7,6 +7,7 @@ public class ui_manager : MonoBehaviour
 
     [SerializeField] private GameObject titleScreenCanvas;
     [SerializeField] private GameObject settingScreenCanvas;
+    [SerializeField] private scene_manager sm;
 
     public void ShowSettingScreen()
     {
@@ -18,5 +19,10 @@ public class ui_manager : MonoBehaviour
     {
         settingScreenCanvas.SetActive(false);
         titleScreenCanvas.SetActive(true);
+    }
+
+    public void startGame()
+    {
+        sm.setNextCondition("Next");
     }
 }
