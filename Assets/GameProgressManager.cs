@@ -47,7 +47,7 @@ public class GameProgressManager : MonoBehaviour
     void InitializeStainCount()
     {
         // Find all game objects with the tag "Stain" and count them
-        totalStains = GameObject.FindGameObjectsWithTag("Stain").Length;
+        totalStains = 0;  //GameObject.FindGameObjectsWithTag("Stain").Length;
 
         if (totalStains == 0)
         {
@@ -58,7 +58,7 @@ public class GameProgressManager : MonoBehaviour
     void InitializeTrashCount()
     {
         // Find all game objects with the tag "Trash" and count them
-        totalTrash = GameObject.FindGameObjectsWithTag("Trash").Length;
+        totalTrash = 5; //GameObject.FindGameObjectsWithTag("Trash").Length;
         if (totalTrash == 0)
         {
             Debug.LogWarning("No trash found in the scene! Check if trash has been instantiated.");
@@ -73,7 +73,7 @@ public class GameProgressManager : MonoBehaviour
     void InitializeAICount()
     {
         // Find all game objects with the tag "AI" and count them
-        totalAI = GameObject.FindGameObjectsWithTag("AI").Length;
+        totalAI = 0; //GameObject.FindGameObjectsWithTag("AI").Length;
         if (totalAI == 0)
         {
             Debug.LogWarning("No AI found in the scene! Check if AI objects have been instantiated.");
@@ -128,6 +128,7 @@ public class GameProgressManager : MonoBehaviour
             // Check if all tasks are completed
             if (cleanedStains + cleanedTrash + cleanedAI == progressBar.maxValue)
             {
+                Debug.Log("checked");
                 progressText.text = "Level Completed"; // Display level completion text
                 OnLevelCompleted?.Invoke(); // Trigger level completion event
             }

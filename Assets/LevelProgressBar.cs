@@ -4,9 +4,11 @@ using TMPro;
 
 public class LevelProgressBar : MonoBehaviour
 {
+    public ParticleSystem Confetti_right;
+    public ParticleSystem Confetti_left;
+    public LevelTimer timer;
     private Slider progressBar; // Reference to the slider component
     private TextMeshProUGUI progressText; // Reference to the TextMeshPro component
-
     void Start()
     {
         // Get the slider component attached to the same GameObject
@@ -25,6 +27,8 @@ public class LevelProgressBar : MonoBehaviour
         {
             Debug.LogError("GameProgressManager not found in the scene!");
         }
+        Confetti_right.Stop();
+        Confetti_left.Stop();
     }
 
     void InitializeProgressBar()
@@ -53,6 +57,10 @@ public class LevelProgressBar : MonoBehaviour
     void ShowLevelCompleted()
     {
         // Display level completion text
-        progressText.text = "Level Completed";
-    }
+        timer.timesUpText.gameObject.SetActive(true);
+        timer.timesUpText.text = "Level Completed";
+        timer.timerRunning = false;
+        Confetti_right.Play();
+        Confetti_left.Play();
+}
 }

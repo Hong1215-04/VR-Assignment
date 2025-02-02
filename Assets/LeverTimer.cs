@@ -9,7 +9,7 @@ public class LevelTimer : MonoBehaviour
     public TextMeshProUGUI timesUpText; // Reference to the "Times Up" text
 
     private float timeRemaining;
-    private bool timerRunning = false;
+    public bool timerRunning = false;
 
     void Start()
     {
@@ -47,6 +47,6 @@ public class LevelTimer : MonoBehaviour
     void TimesUp()
     {
         timesUpText.gameObject.SetActive(true); // Show "Times Up" text
-        Debug.Log("Times Up!");
+        timesUpText.text = "TimesUp";
     }
 }
