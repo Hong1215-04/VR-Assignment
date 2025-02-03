@@ -4,26 +4,25 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEditor;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
+using Unity.XR.CoreUtils;
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public GameObject playerMovement;
 
     private int index;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerMovement.SetActive(false);
+        
         textComponent.text = string.Empty;
         StartDialogue();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void StartDialogue()
@@ -65,6 +64,7 @@ public class Dialogue : MonoBehaviour
         {
             StopAllCoroutines();
             textComponent.text = lines[index];
+            playerMovement.SetActive(true);
         }
     }
 }
