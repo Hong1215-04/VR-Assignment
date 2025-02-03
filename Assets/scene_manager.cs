@@ -10,7 +10,7 @@ public class scene_manager : MonoBehaviour
     private float transitionDuration = 1f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
     [SerializeField] private int looseSceneIndex; // level go when "Loose"
-    [SerializeField] private scene_manager sm;
+    private MainSceneStateManager msManager;
 
     private void Update()
     {
