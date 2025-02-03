@@ -17,13 +17,13 @@ public class Cockroach : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        Debug.Log(transform.position);
     }
 
     void Update()
     {
         Patrolling();
     }
+
     private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
