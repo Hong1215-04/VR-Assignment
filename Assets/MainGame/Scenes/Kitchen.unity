@@ -29982,7 +29982,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.033333335
+  m_VoxelSize: 0.05
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5878b155a80e18a46b510b2ffb4f7e93, type: 2}
   m_BuildHeightMesh: 0
@@ -40819,15 +40819,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.099
+      value: 4.897
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.356
+      value: 4.219
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.271
+      value: -8.085
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalRotation.w
@@ -159987,7 +159987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1091418627}
-  player: {fileID: 0}
+  player: {fileID: 766719597}
   anim: {fileID: 1091418630}
   whatIsGround:
     serializedVersion: 2
@@ -159999,7 +159999,7 @@ MonoBehaviour:
   walkPointRange: 5
   timeBetweenAttacks: 2
   sightRange: 10000
-  attackRange: 0.6
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!54 &1091418629
@@ -160010,7 +160010,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091418626}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -261115,6 +261115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Int_apt_01_Floor_01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5921126462729676309, guid: bee09117d2231334d90a559b1ff7f323, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5921126462729845301, guid: bee09117d2231334d90a559b1ff7f323, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -316857,21 +316861,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1446367487}
     m_Modifications:
+    - target: {fileID: 1143746962895186319, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1227557790159680335, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.135
+      value: -1.13
       objectReference: {fileID: 0}
     - target: {fileID: 1227557790159680335, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.503
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1227557790159680335, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.462
+      value: -0.742
       objectReference: {fileID: 0}
     - target: {fileID: 2170178008488602006, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: m_Name
       value: DoorFrame_Apt_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296751938604968509, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7296751938604968511, guid: e9a47cdb5968d66499f6b4ee53467cd4, type: 3}
       propertyPath: Player
