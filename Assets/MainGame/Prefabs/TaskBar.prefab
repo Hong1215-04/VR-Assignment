@@ -527,6 +527,8 @@ MonoBehaviour:
   timer: {fileID: 3012533326842691643}
   victory: {fileID: 3685440674108889030}
   pop: {fileID: 2212849324551053894}
+  levelBetweennDuration: 5
+  sm: {fileID: 0}
 --- !u!82 &3685440674108889030
 AudioSource:
   m_ObjectHideFlags: 0
@@ -536,10 +538,10 @@ AudioSource:
   m_GameObject: {fileID: 4974228762324340622}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: d1d8067d8e97e47429a22b5cef8c4b43, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -632,7 +634,7 @@ AudioSource:
   m_GameObject: {fileID: 4974228762324340622}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6cdcca8b422dea142936b9febcfd9426, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

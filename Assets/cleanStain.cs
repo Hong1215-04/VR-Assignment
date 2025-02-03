@@ -25,6 +25,7 @@ public class Stain : MonoBehaviour
             if (currentStep < cleaningSteps && currentStep < stainMaterials.Length)
             {
                 stainRenderer.material = stainMaterials[currentStep];
+                //GameProgressManager.Instance.CleanStain();
             }
             else if (currentStep >= cleaningSteps)
             {
