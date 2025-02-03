@@ -155816,30 +155816,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash_apt_01
       objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Size.x
-      value: 0.21457332
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Size.y
-      value: 0.05234378
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Size.z
-      value: 0.26956767
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Center.x
-      value: 0.0010371208
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Center.y
-      value: 0.05555221
-      objectReference: {fileID: 0}
-    - target: {fileID: 8791161174527382560, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
-      propertyPath: m_Center.z
-      value: 0.0018014866
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
