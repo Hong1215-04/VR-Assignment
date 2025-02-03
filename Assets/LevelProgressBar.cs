@@ -7,6 +7,9 @@ public class LevelProgressBar : MonoBehaviour
     public ParticleSystem Confetti_right;
     public ParticleSystem Confetti_left;
     public LevelTimer timer;
+    public AudioSource victory;
+    public AudioSource pop;
+
     private Slider progressBar; // Reference to the slider component
     private TextMeshProUGUI progressText; // Reference to the TextMeshPro component
     void Start()
@@ -60,7 +63,9 @@ public class LevelProgressBar : MonoBehaviour
         timer.timesUpText.gameObject.SetActive(true);
         timer.timesUpText.text = "Level Completed";
         timer.timerRunning = false;
+        pop.Play();
         Confetti_right.Play();
         Confetti_left.Play();
-}
+        victory.Play();
+    }
 }
