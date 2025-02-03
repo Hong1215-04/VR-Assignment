@@ -91,6 +91,7 @@ public class Cat_AI : MonoBehaviour
         if (!alreadyAttacked)
         {
             anim.Play("sit");
+
             alreadyAttacked = true;
             //Invoke = CallOn
             Invoke(nameof(ResetAttack),timeBetweenAttacks);
