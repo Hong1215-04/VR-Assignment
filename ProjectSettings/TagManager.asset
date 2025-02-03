@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CleaningTool
+  - Anchor
+  - Stain
+  - TrashBin
+  - Trash
+  - Anchor
+  - BinBag
   layers:
   - Default
   - TransparentFX
