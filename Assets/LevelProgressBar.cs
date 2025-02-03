@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class LevelProgressBar : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class LevelProgressBar : MonoBehaviour
     public LevelTimer timer;
     private Slider progressBar; // Reference to the slider component
     private TextMeshProUGUI progressText; // Reference to the TextMeshPro component
+    [SerializeField] private float levelBetweennDuration = 5f;
+    [SerializeField] private scene_manager sm;
+
     void Start()
     {
         // Get the slider component attached to the same GameObject
@@ -62,5 +66,15 @@ public class LevelProgressBar : MonoBehaviour
         timer.timerRunning = false;
         Confetti_right.Play();
         Confetti_left.Play();
-}
+
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(levelBetweennDuration);
+        Confetti_right.Stop();
+        Confetti_left.Stop();
+        sm.setNextCondition("Next");
+    }
 }

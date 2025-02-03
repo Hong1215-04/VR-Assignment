@@ -15219,7 +15219,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 22.6023, y: 0.4625}
-  m_SizeDelta: {x: 254.367, y: 73.5082}
+  m_SizeDelta: {x: 270, y: 73.5082}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93863265
 MonoBehaviour:
@@ -90946,6 +90946,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 5477929468748667776, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000396057768214997, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -104446,9 +104458,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0d07afbfd3ea749adb6ff3be20ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Confetti_right: {fileID: 0}
-  Confetti_left: {fileID: 0}
-  timer: {fileID: 0}
+  Confetti_right: {fileID: 899081072}
+  Confetti_left: {fileID: 1579304315}
+  timer: {fileID: 2116183082}
+  sm: {fileID: 647455970}
 --- !u!224 &741003153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127593,6 +127606,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 646888896587959858, guid: 5aac716a11271124887a33ec1836f27b, type: 3}
   m_PrefabInstance: {fileID: 898723183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &899081072 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 627225348511164229, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &899379141
 GameObject:
@@ -222884,6 +222902,11 @@ Transform:
   - {fileID: 1681585669}
   m_Father: {fileID: 732190542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1579304315 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2887704388304865928, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1579775272
 PrefabInstance:
   m_ObjectHideFlags: 0
