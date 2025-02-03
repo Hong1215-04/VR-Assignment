@@ -8,6 +8,13 @@ public class DetactTrash_SmallBin : MonoBehaviour
 
     private Rigidbody body;
 
+    private void Update()
+    {
+        if (progressbar.current < progressbar.max)
+        {
+            GetComponent<Collider>().isTrigger = true;
+        }
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
