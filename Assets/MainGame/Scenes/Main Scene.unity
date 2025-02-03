@@ -74938,6 +74938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1392681438518009198, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: vrCamera
+      value: 
+      objectReference: {fileID: 1803545557}
     - target: {fileID: 3107917789342848818, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.99402
@@ -74994,6 +74998,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1803545553}
     - target: {fileID: 8433483056698508341, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -252491,6 +252499,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1803545557 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1803593613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306391,10 +306404,10 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 535343832}
   - {fileID: 299639869}
   - {fileID: 1056967305}
   - {fileID: 732190542}
   - {fileID: 529485330}
   - {fileID: 1690225990054110495}
   - {fileID: 1879152676}
-  - {fileID: 535343832}
