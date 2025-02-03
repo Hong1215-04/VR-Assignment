@@ -50,7 +50,6 @@ public class Testing_Multiple : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) Find_Trash();
         if (playerInSightRange && playerInAttackRange) Founded();
-
     }
     private void Patrolling()
     {
@@ -59,7 +58,6 @@ public class Testing_Multiple : MonoBehaviour
         if (walkPointSet)
             agent.SetDestination(walkPoint);
         anim.Play("walk");
-
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
