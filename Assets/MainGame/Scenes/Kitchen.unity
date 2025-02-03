@@ -159995,13 +159995,18 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
+  Door:
+    serializedVersion: 2
+    m_Bits: 256
   walkPoint: {x: 5, y: 0, z: 5}
   walkPointRange: 5
   timeBetweenAttacks: 2
   sightRange: 10000
-  attackRange: 1
+  attackRange: 0.6
+  DoorRange: 0.2
   playerInSightRange: 0
   playerInAttackRange: 0
+  DoorInAttackRange: 0
 --- !u!54 &1091418629
 Rigidbody:
   m_ObjectHideFlags: 0
