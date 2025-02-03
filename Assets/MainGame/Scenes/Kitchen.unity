@@ -29933,6 +29933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210308842}
   - component: {fileID: 210308843}
+  - component: {fileID: 210308844}
   m_Layer: 0
   m_Name: NavMesh
   m_TagString: Untagged
@@ -29985,6 +29986,37 @@ MonoBehaviour:
   m_VoxelSize: 0.05
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5878b155a80e18a46b510b2ffb4f7e93, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!114 &210308844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210308841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: -334000983
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 469
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.033333335
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 6d92c202f8414864393855565e8557b8, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &210508882
 GameObject:
@@ -54664,8 +54696,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 7050734306818085629}
   m_Enabled: 1
   m_AgentTypeID: -334000983
-  m_Radius: 0.11288872
-  m_Speed: 2.5
+  m_Radius: 0.2
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -54677,27 +54709,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!65 &375171071
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7050734306818085629}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.22875002, y: 0.19546875, z: 0.048442382}
-  m_Center: {x: -0.001486283, y: 0.014058683, z: 0.02745754}
 --- !u!1 &375600779
 GameObject:
   m_ObjectHideFlags: 0
@@ -316684,7 +316695,7 @@ GameObject:
   - component: {fileID: 375171062}
   - component: {fileID: 375171065}
   - component: {fileID: 375171069}
-  - component: {fileID: 375171071}
+  - component: {fileID: 9044314076652223353}
   m_Layer: 0
   m_Name: Cockroach
   m_TagString: Untagged
@@ -320462,12 +320473,24 @@ Transform:
   m_GameObject: {fileID: 7050734306818085629}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7067841, y: 0.021358594, z: 0.021358594, w: 0.7067841}
-  m_LocalPosition: {x: 5.867691, y: 4.1811, z: -10.407}
-  m_LocalScale: {x: 0.3664081, y: 0.31823373, z: 0.36640808}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5.867691, y: 4.135, z: -10.407}
+  m_LocalScale: {x: 0.39999998, y: 0.34740904, z: 0.39999998}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9044314076652223353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050734306818085629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb76678157c6c894091a56ef7e315126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
