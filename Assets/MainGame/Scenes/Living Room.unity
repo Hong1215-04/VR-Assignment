@@ -63228,6 +63228,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &441087509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &441725764
 GameObject:
   m_ObjectHideFlags: 0
@@ -90706,6 +90711,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1392681438518009198, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: vrCamera
+      value: 
+      objectReference: {fileID: 441087509}
     - target: {fileID: 3107917789342848818, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.99402
@@ -90758,6 +90767,10 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1803545553}
     - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -245956,33 +245969,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1879152676}
     m_Modifications:
+    - target: {fileID: 52044696186908651, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1803545553}
+    - target: {fileID: 52044696186908651, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 812204477697868952, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_Name
       value: TaskBar
       objectReference: {fileID: 0}
-    - target: {fileID: 2212849324551053894, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3685440674108889030, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
-      propertyPath: m_Volume
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3685440674108889030, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -246002,11 +246011,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1142.5
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 568.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -246026,15 +246047,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -246055,6 +246076,18 @@ PrefabInstance:
     - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940432001381123560, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952086865147077961, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: vrCamera
+      value: 
+      objectReference: {fileID: 441087509}
+    - target: {fileID: 6024005935365379813, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8292269806580654967, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: sm
