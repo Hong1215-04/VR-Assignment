@@ -29,7 +29,11 @@ public class Testing_Multiple : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+
     //private LayerMask childobjectlm;
+
+    public GameObject childlayer;
+
 
     public void Start()
     {
@@ -39,8 +43,8 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Update()
     {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, childlayer.layer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, childlayer.layer);
 
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 
