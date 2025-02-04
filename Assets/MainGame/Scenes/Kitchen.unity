@@ -26498,7 +26498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316788849309043656, guid: 967e2ec0b2159b54d90e708806f70378, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1536813
+      value: 4.508
       objectReference: {fileID: 0}
     - target: {fileID: 5316788849309043656, guid: 967e2ec0b2159b54d90e708806f70378, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29579,7 +29579,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 247
+    m_Bits: 887
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -143567,7 +143567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 890031601036744375, guid: b073855636f574949a750fae6261c52a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.149828
+      value: 5.051
       objectReference: {fileID: 0}
     - target: {fileID: 890031601036744375, guid: b073855636f574949a750fae6261c52a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -220760,7 +220760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702072885263905018, guid: 9fe7619842e610f49a4f8db6020b3b49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2962723
+      value: 5.104
       objectReference: {fileID: 0}
     - target: {fileID: 7702072885263905018, guid: 9fe7619842e610f49a4f8db6020b3b49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -248059,6 +248059,10 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

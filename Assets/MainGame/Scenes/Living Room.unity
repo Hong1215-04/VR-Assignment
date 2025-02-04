@@ -104373,6 +104373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0d07afbfd3ea749adb6ff3be20ab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Confetti_right: {fileID: 0}
+  Confetti_left: {fileID: 0}
+  timer: {fileID: 0}
 --- !u!224 &741003153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -227116,6 +227119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
+  sm: {fileID: 0}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
@@ -244319,6 +244323,10 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -300416,6 +300424,7 @@ MonoBehaviour:
   timeLimit: 300
   timerText: {fileID: 376030600}
   timesUpText: {fileID: 93863265}
+  timerRunning: 0
 --- !u!1 &2116538651
 GameObject:
   m_ObjectHideFlags: 0
