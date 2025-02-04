@@ -19,4 +19,5 @@ public class MainSceneStateManager : MonoBehaviour
         // Save immediately to disk.
         PlayerPrefs.Save();
     }
+
 }

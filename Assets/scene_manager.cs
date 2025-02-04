@@ -10,7 +10,6 @@ public class scene_manager : MonoBehaviour
     private float transitionDuration = 1f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
     [SerializeField] private int looseSceneIndex; // level go when "Loose"
-    private MainSceneStateManager msManager;
 
     private void Update()
     {
@@ -41,14 +40,16 @@ public class scene_manager : MonoBehaviour
 
     }
 
-    public void startGame()
+    public void StartGame()
     {
         setNextCondition("Next");
     }
 
-    public void quitGame()
+    public void QuitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
+        PlayerPrefs.Save();
+        UnityEditor.EditorApplication.isPlaying = false;   
         Application.Quit();
     }
 
