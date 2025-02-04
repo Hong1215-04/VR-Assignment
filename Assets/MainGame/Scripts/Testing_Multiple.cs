@@ -29,15 +29,12 @@ public class Testing_Multiple : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    private LayerMask childobjectlm;
+
     public void Start()
     {
         anim = GetComponent<Animator>();
-    }
-        
-
-    private void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
+        childobjectlm = GetComponentInChildren<LayerMask>();
     }
 
     private void Update()
