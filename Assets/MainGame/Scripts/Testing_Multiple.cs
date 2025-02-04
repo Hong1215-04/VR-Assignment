@@ -29,16 +29,12 @@ public class Testing_Multiple : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-
-    //private LayerMask childobjectlm;
-
     public GameObject childlayer;
 
 
     public void Start()
     {
         anim = GetComponent<Animator>();
-        //childobjectlm = GetComponentInChildren<LayerMask>();
     }
 
     private void Update()
@@ -104,7 +100,7 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Founded()
     {
-        agent.SetDestination(NearestOBJ.position);
+        agent.SetDestination(transform.position);
 
         transform.LookAt(NearestOBJ);
 
