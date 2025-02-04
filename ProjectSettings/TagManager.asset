@@ -18,10 +18,10 @@ TagManager:
   - broom
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - whatIsGround
+  - whatIsPlayer
+  - Door
+  - Wall
   - 
   - 
   - 

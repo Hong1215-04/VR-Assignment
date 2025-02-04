@@ -22952,6 +22952,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42f30c85f9e074e4eb17ea01048327d2, type: 3}
+--- !u!1 &160897620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160897623}
+  - component: {fileID: 160897624}
+  - component: {fileID: 160897621}
+  m_Layer: 0
+  m_Name: Main Scene State Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &160897621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160897620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acaa8a424f4544647af73553c609f710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1883733918}
+  isDialogueCompleted: 0
+  msManager: {fileID: 160897624}
+--- !u!4 &160897623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160897620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.699275, y: 0.558136, z: 0.9947442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160897624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160897620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e075d09f2e6454cbdf2b5b948541dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1883733918}
+  isDialogueCompleted: 0
+  firstTime: 1
 --- !u!1 &161707260
 GameObject:
   m_ObjectHideFlags: 0
@@ -74938,6 +75001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1392681438518009198, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: vrCamera
+      value: 
+      objectReference: {fileID: 1803545557}
     - target: {fileID: 3107917789342848818, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.99402
@@ -74994,6 +75061,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1803545553}
     - target: {fileID: 8433483056698508341, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -80719,6 +80790,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1611595684}
         m_TargetAssemblyTypeName: ui_manager, Assembly-CSharp
         m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 160897624}
+        m_TargetAssemblyTypeName: MainSceneStateManager, Assembly-CSharp
+        m_MethodName: SaveState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -252491,6 +252574,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1803545557 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1803593613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262965,6 +263053,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883131070}
   m_Mesh: {fileID: -2461011216221762474, guid: cd0bf29c9c9af6f4098b74076d25f0cd, type: 3}
+--- !u!1 &1883733918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1884566607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306391,10 +306484,11 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 160897623}
+  - {fileID: 535343832}
   - {fileID: 299639869}
   - {fileID: 1056967305}
   - {fileID: 732190542}
   - {fileID: 529485330}
   - {fileID: 1690225990054110495}
   - {fileID: 1879152676}
-  - {fileID: 535343832}

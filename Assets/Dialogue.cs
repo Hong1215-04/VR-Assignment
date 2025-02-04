@@ -19,8 +19,17 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Check if dialogue has already been completed
+        if (PlayerPrefs.GetInt("MainScene_DialogueCompleted", 0) == 1)
+        {
+            // Dialogue is already completed: disable dialogue UI and enable player movement
+            gameObject.SetActive(false);
+            playerMovement.SetActive(true);
+            return;
+        }
+
+        // Otherwise, start the dialogue and disable player movement
         playerMovement.SetActive(false);
-        
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -51,6 +60,11 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+
+            // Set the dialogue completion flag in PlayerPrefs.
+            PlayerPrefs.SetInt("MainScene_DialogueCompleted", 1);
+            PlayerPrefs.Save();
+
         }
     }
 
