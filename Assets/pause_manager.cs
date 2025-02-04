@@ -6,6 +6,8 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
+    public InputDevice InputDevice;
+
 
     private bool isPaused = false;
     // This flag prevents multiple toggles when the menu button is held down
@@ -13,21 +15,22 @@ public class PauseManager : MonoBehaviour
 
     void Start()
     {
+        //InitializeController();
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
     }
 
     void Update()
     {
-        // Get the left hand device (Oculus menu button is on the left controller)
-        List<InputDevice> leftHandDevices = new List<InputDevice>();
-        InputDevices.GetDevicesAtXRNode(XRNode.LeftHand, leftHandDevices);
+        //// Get the left hand device (Oculus menu button is on the left controller)
+        //List<InputDevice> leftHandDevices = new List<InputDevice>();
+        //InputDevices.GetDevicesAtXRNode(XRNode.LeftHand, leftHandDevices);
 
-        if (leftHandDevices.Count > 0)
-        {
-            InputDevice leftDevice = leftHandDevices[0];
+        //if (leftHandDevices.Count > 0)
+        //{
+            //InputDevice leftDevice = leftHandDevices[0];
             bool menuButtonPressed = false;
-            if (leftDevice.TryGetFeatureValue(CommonUsages.menuButton, out menuButtonPressed) && menuButtonPressed)
+            if (InputDevice.TryGetFeatureValue(CommonUsages.menuButton, out menuButtonPressed) && menuButtonPressed)
             {
                 // Only toggle when the button is first pressed
                 if (!menuButtonPressedLastFrame)
@@ -40,7 +43,7 @@ public class PauseManager : MonoBehaviour
             {
                 menuButtonPressedLastFrame = false;
             }
-        }
+        //}
     }
 
     // Toggle pause state
@@ -94,5 +97,20 @@ public class PauseManager : MonoBehaviour
         PlayerPrefs.Save();
         UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
+    }
+
+    void InitializeController()
+    {
+        List<InputDevice> devices = new List<InputDevice>();
+        InputDeviceCharacteristics controllerCharacteristics =
+            InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.Right;
+
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+
+        if (devices.Count > 0)
+        {
+            InputDevice = devices[0];
+            Debug.Log("Controller Found: " + InputDevice.name);
+        }
     }
 }
