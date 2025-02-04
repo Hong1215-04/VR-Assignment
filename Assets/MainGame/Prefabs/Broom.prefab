@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364338577455213403}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.21729153, z: 0, w: 0.9761068}
-  m_LocalPosition: {x: 0.298, y: 0, z: 0.244}
+  m_LocalRotation: {x: -0, y: -0.21729153, z: -0, w: 0.9761068}
+  m_LocalPosition: {x: 0.35400003, y: 0.025000572, z: 0.26800022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 257382180738520095}
+  m_Father: {fileID: 6317210042505392651}
   m_LocalEulerAnglesHint: {x: 0, y: -25.1, z: 0}
 --- !u!136 &6403077092729633347
 CapsuleCollider:
@@ -100,8 +100,8 @@ GameObject:
   - component: {fileID: 1534331384636875467}
   - component: {fileID: 1853777292525784606}
   - component: {fileID: 8717636247816676308}
-  - component: {fileID: 2275778533245931866}
   - component: {fileID: 4233215972956952227}
+  - component: {fileID: 5550131793746550240}
   m_Layer: 0
   m_Name: Broom
   m_TagString: CleaningTool
@@ -119,9 +119,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 54.577797, y: -0, z: 4.31}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 3479313354043740918}
   - {fileID: 257382180738520095}
   - {fileID: 5468091118535307771}
   m_Father: {fileID: 0}
@@ -296,7 +297,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 2
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -338,27 +339,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!65 &2275778533245931866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3878184535722787745}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.23361483, y: 0.95780855, z: 0.18354823}
-  m_Center: {x: -0.01634101, y: 0, z: 0.068197146}
 --- !u!82 &4233215972956952227
 AudioSource:
   m_ObjectHideFlags: 0
@@ -455,6 +435,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &5550131793746550240
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878184535722787745}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15074223, y: 0.97218275, z: 0.06923258}
+  m_Center: {x: -0.000023394823, y: -0.00047564507, z: 0.024164021}
 --- !u!1 &7945608140749538537
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,11 +465,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257382180738520095}
-  - component: {fileID: 225950889390637794}
   - component: {fileID: 6787660028900105224}
   - component: {fileID: 5306467696124036035}
+  - component: {fileID: 4148011543988534176}
   m_Layer: 0
-  m_Name: BroomCollider
+  m_Name: wood
   m_TagString: CleaningTool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,31 +487,9 @@ Transform:
   m_LocalPosition: {x: 0.056, y: 0.025, z: 0.024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3479313354043740918}
+  m_Children: []
   m_Father: {fileID: 6317210042505392651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &225950889390637794
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7945608140749538537}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2028079, y: 0.99448013, z: 0.13345766}
-  m_Center: {x: -0.057169676, y: -0.025548935, z: 0.03200206}
 --- !u!114 &6787660028900105224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +599,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &4148011543988534176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945608140749538537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14169335, y: 0.9180075, z: 0.055028692}
+  m_Center: {x: -0.05575776, y: -0.024838746, z: 0.06360793}
 --- !u!1 &8823861897109317769
 GameObject:
   m_ObjectHideFlags: 0
