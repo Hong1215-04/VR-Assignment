@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1853777292525784606}
   - component: {fileID: 8717636247816676308}
   - component: {fileID: 4233215972956952227}
-  - component: {fileID: 5550131793746550240}
+  - component: {fileID: 300189373181236276}
   m_Layer: 0
   m_Name: Broom
   m_TagString: CleaningTool
@@ -186,7 +186,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3878184535722787745}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -202,7 +202,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &8717636247816676308
@@ -297,20 +297,20 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
-  m_SmoothPosition: 0
-  m_SmoothPositionAmount: 8
-  m_TightenPosition: 0.1
+  m_SmoothPosition: 1
+  m_SmoothPositionAmount: 12
+  m_TightenPosition: 1
   m_TrackRotation: 1
-  m_SmoothRotation: 0
-  m_SmoothRotationAmount: 8
-  m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_SmoothRotation: 1
+  m_SmoothRotationAmount: 12
+  m_TightenRotation: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -435,27 +435,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &5550131793746550240
-BoxCollider:
+--- !u!114 &300189373181236276
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3878184535722787745}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.15074223, y: 0.97218275, z: 0.06923258}
-  m_Center: {x: -0.000023394823, y: -0.00047564507, z: 0.024164021}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8633e23a6212bff42955ddc469bc4378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: {fileID: 8717636247816676308}
+  rigidbody: {fileID: 1853777292525784606}
+  newCenterOfMass: {x: 0, y: 0, z: 0}
 --- !u!1 &7945608140749538537
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +462,7 @@ GameObject:
   - component: {fileID: 6787660028900105224}
   - component: {fileID: 5306467696124036035}
   - component: {fileID: 4148011543988534176}
+  - component: {fileID: 8784743528915524705}
   m_Layer: 0
   m_Name: wood
   m_TagString: CleaningTool
@@ -618,8 +613,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.14169335, y: 0.9180075, z: 0.055028692}
-  m_Center: {x: -0.05575776, y: -0.024838746, z: 0.06360793}
+  m_Size: {x: 0.14169335, y: 0.8880824, z: 0.036325946}
+  m_Center: {x: -0.05575776, y: -0.02670914, z: 0.072959304}
+--- !u!65 &8784743528915524705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945608140749538537}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14139116, y: 0.9572208, z: 0.063622}
+  m_Center: {x: -0.055173337, y: -0.026183724, z: 0.009351373}
 --- !u!1 &8823861897109317769
 GameObject:
   m_ObjectHideFlags: 0
