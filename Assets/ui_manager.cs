@@ -7,7 +7,8 @@ public class ui_manager : MonoBehaviour
 
     [SerializeField] private GameObject titleScreenCanvas;
     [SerializeField] private GameObject settingScreenCanvas;
-    [SerializeField] private scene_manager sm;
+    [SerializeField] private GameObject inGameMainMenu;
+    [SerializeField] private GameObject inGameSetting;
 
     public void ShowSettingScreen()
     {
@@ -21,9 +22,16 @@ public class ui_manager : MonoBehaviour
         titleScreenCanvas.SetActive(true);
     }
 
-    public void LoadNextScene()
+
+    public void ShowInGameMainMenu()
     {
-        sm.setNextCondition("Next");
+        inGameSetting.SetActive(false);
+        inGameMainMenu.SetActive(true);
     }
 
+    public void ShowInGameSetting()
+    {
+        inGameMainMenu.SetActive(false);
+        inGameSetting.SetActive(true);
+    }
 }

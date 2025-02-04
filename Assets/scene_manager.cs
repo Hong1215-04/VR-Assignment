@@ -10,7 +10,6 @@ public class scene_manager : MonoBehaviour
     private float transitionDuration = 1f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
     [SerializeField] private int looseSceneIndex; // level go when "Loose"
-    private MainSceneStateManager msManager;
 
     private void Update()
     {
@@ -39,6 +38,19 @@ public class scene_manager : MonoBehaviour
         yield return new WaitForSeconds(transitionDuration);
         SceneManager.LoadScene(looseSceneIndex);
 
+    }
+
+    public void StartGame()
+    {
+        setNextCondition("Next");
+    }
+
+    public void QuitGame()
+    {
+        PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
+        PlayerPrefs.Save();
+        UnityEditor.EditorApplication.isPlaying = false;   
+        Application.Quit();
     }
 
     public string getNextCondition() { return nextCondition; }

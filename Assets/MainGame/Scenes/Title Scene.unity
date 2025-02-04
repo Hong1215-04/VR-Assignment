@@ -390,6 +390,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48346422}
   m_CullTransparentMesh: 1
+--- !u!1001 &63925005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 88.6076
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.122139
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.709156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478875228424048865, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108639123558900731, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724931296190776755, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: m_Name
+      value: Pause Manager 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
 --- !u!1 &186832998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5167925059111895691, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -1428,9 +1489,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1611595684}
-        m_TargetAssemblyTypeName: ui_manager, Assembly-CSharp
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 606884371}
+        m_TargetAssemblyTypeName: scene_manager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1942,7 +2003,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1088501905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 606884371}
+        m_TargetAssemblyTypeName: scene_manager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1088501905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3136,7 +3209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
-  sm: {fileID: 606884371}
+  inGameMainMenu: {fileID: 0}
+  inGameSetting: {fileID: 0}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
@@ -4240,6 +4314,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 898417032595269602}
+  - {fileID: 63925005}
   - {fileID: 299639869}
   - {fileID: 1056967305}
   - {fileID: 1879152676}
