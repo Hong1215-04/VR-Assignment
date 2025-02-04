@@ -9,6 +9,9 @@ public class Cockroach : MonoBehaviour
 
     public LayerMask whatIsGround;
 
+    float time;
+    float timeDelay;
+
     //Patrolling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -17,11 +20,21 @@ public class Cockroach : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        time = 0f;
+        timeDelay = 3f;
     }
 
     void Update()
     {
         Patrolling();
+
+        time = time + 1f * Time.deltaTime;
+
+        if (time >= timeDelay)
+        {
+            time = 0f;
+            walkPointSet = false;
+        }
     }
 
     private void Patrolling()
@@ -35,6 +48,12 @@ public class Cockroach : MonoBehaviour
 
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
+    }
+
+    IEnumerator ChangePoint()
+    {
+        yield return new WaitForSeconds(3);
+        walkPointSet = false;
     }
 
     private void SearchWalkPoint()
