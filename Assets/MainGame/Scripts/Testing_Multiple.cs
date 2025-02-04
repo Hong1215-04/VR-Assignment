@@ -47,13 +47,6 @@ public class Testing_Multiple : MonoBehaviour
 
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) Find_Trash();
-        if (playerInSightRange && playerInAttackRange) Founded();
-    }
-
-    private void SearchNearOBJ()
-    {
         for (int i = 0; i < AllTrash.Length; i++)
         {
             Distance = Vector3.Distance(this.transform.position, AllTrash[i].transform.position);
@@ -64,6 +57,10 @@ public class Testing_Multiple : MonoBehaviour
                 NearestDistance = Distance;
             }
         }
+
+        if (!playerInSightRange && !playerInAttackRange) Patrolling();
+        if (playerInSightRange && !playerInAttackRange) Find_Trash();
+        if (playerInSightRange && playerInAttackRange) Founded();
     }
 
     private void Patrolling()
