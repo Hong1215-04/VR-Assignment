@@ -6,13 +6,11 @@ using UnityEngine.AI;
 public class Testing_Multiple : MonoBehaviour
 {
     public GameObject[] AllTrash;
-    public GameObject NearestOBJ;
+    public Transform NearestOBJ;
     float Distance;
-    float NearestDistance;
+    float NearestDistance = 10000;
 
     public NavMeshAgent agent;
-
-    public Transform player;
 
     public Animator anim;
 
@@ -35,10 +33,10 @@ public class Testing_Multiple : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+        
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Trash").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -47,10 +45,27 @@ public class Testing_Multiple : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        AllTrash = GameObject.FindGameObjectsWithTag("Trash");
+
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) Find_Trash();
         if (playerInSightRange && playerInAttackRange) Founded();
     }
+
+    private void SearchNearOBJ()
+    {
+        for (int i = 0; i < AllTrash.Length; i++)
+        {
+            Distance = Vector3.Distance(this.transform.position, AllTrash[i].transform.position);
+
+            if (Distance < NearestDistance)
+            {
+                NearestOBJ = AllTrash[i].transform;
+                NearestDistance = Distance;
+            }
+        }
+    }
+
     private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
@@ -80,7 +95,7 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Find_Trash()
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(NearestOBJ.position);
         anim.Play("walk");
     }
 
@@ -88,7 +103,7 @@ public class Testing_Multiple : MonoBehaviour
     {
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        transform.LookAt(NearestOBJ);
 
         if (!alreadyAttacked)
         {
