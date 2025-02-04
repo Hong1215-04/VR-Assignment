@@ -23,6 +23,7 @@ public class Cockroach : MonoBehaviour
     {
         Patrolling();
     }
+
     private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
