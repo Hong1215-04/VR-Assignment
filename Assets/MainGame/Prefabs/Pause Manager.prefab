@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ui_manager, Assembly-CSharp
-        m_MethodName: ShowTitleScreen
+      - m_Target: {fileID: 3407627473582477605}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -340,8 +340,8 @@ RectTransform:
   m_GameObject: {fileID: 1589985464978040160}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -3.040844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.049999997, y: 0.049999997, z: 0.049999997}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4671200467105338289}
   - {fileID: 4393253807667118125}
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrCamera: {fileID: 0}
-  distanceFromCamera: 1.5
+  distanceFromCamera: 1
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1951303071545399132
 GameObject:
@@ -825,7 +825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4671200467105338289
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1073,9 +1073,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ui_manager, Assembly-CSharp
-        m_MethodName: ShowInGameSetting
+      - m_Target: {fileID: 3407627473582477605}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: SettingsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 2478875228424048865}
   - component: {fileID: 3407627473582477605}
   m_Layer: 0
-  m_Name: Pause Manager 1
+  m_Name: Pause Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,6 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 4108639123558900731}
   settingsMenuUI: {fileID: 1951303071545399132}
+  menuButton: {fileID: 4116954447336496447, guid: 0be0028c24f2a4c14a96b6aa39055933, type: 3}
 --- !u!1 &5892761814850926693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,9 +1656,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: scene_manager, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 3407627473582477605}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: QuitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2055,7 +2056,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3616536692551819646}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3407627473582477605}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7828589900460864306
 GameObject:
   m_ObjectHideFlags: 0
