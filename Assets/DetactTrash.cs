@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DetactTrash : MonoBehaviour
 {
@@ -7,17 +9,22 @@ public class DetactTrash : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.tag);
-        if (collider.CompareTag("BinBag"))
+        List<GameObject> trashes = new List<GameObject>();
+        trashes.Add(collider.gameObject);
+
+        foreach (GameObject trash in trashes)
         {
-            Debug.Log("in");
-            trash = collider.gameObject;
-            GameProgressManager.Instance.CleanTrash();
-            StartCoroutine (destroyTrash());
+            Debug.Log("list" + trash.name);
+            if (trash.CompareTag("BinBag"))
+            {
+                Debug.Log(trash.name);
+                GameProgressManager.Instance.CleanTrash();
+                StartCoroutine(destroyTrash(trash));
+            }
         }
     }
 
-    private IEnumerator destroyTrash()
+    private IEnumerator destroyTrash(GameObject trash)
     {
         yield return new WaitForSeconds(3);
 

@@ -21,8 +21,4 @@ public class ui_manager : MonoBehaviour
         titleScreenCanvas.SetActive(true);
     }
 
-    public void startGame()
-    {
-        sm.setNextCondition("Next");
-    }
 }
