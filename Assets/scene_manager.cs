@@ -41,6 +41,17 @@ public class scene_manager : MonoBehaviour
 
     }
 
+    public void startGame()
+    {
+        setNextCondition("Next");
+    }
+
+    public void quitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+    }
+
     public string getNextCondition() { return nextCondition; }
     public void setNextCondition(string nCond) { nextCondition = nCond; }
 

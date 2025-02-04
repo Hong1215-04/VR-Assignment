@@ -21,9 +21,4 @@ public class ui_manager : MonoBehaviour
         titleScreenCanvas.SetActive(true);
     }
 
-    public void LoadNextScene()
-    {
-        sm.setNextCondition("Next");
-    }
-
 }
