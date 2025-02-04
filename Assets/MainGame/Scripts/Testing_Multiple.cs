@@ -49,11 +49,6 @@ public class Testing_Multiple : MonoBehaviour
 
         FindNear();
 
-        if (NearestOBJ == null)
-        {
-            FindNear();
-        }
-
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) Find_Trash();
         if (playerInSightRange && playerInAttackRange) Founded();
