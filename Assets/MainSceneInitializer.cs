@@ -8,13 +8,22 @@ public class MainSceneInitializer : MonoBehaviour
 
     public bool isDialogueCompleted;
 
-    void Start()
+    public MainSceneStateManager msManager;
+
+    private void Awake()
     {
-        if(PlayerPrefs.GetInt("MainScene_DialogueCompleted") == 1)
+        if (msManager.firstTime)
         {
-            LoadState();
+            PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
+            PlayerPrefs.Save();
+            msManager.firstTime = false;
         }
         
+    }
+
+    void Start()
+    {
+        LoadState();
     }
 
     void LoadState()
@@ -28,5 +37,10 @@ public class MainSceneInitializer : MonoBehaviour
             player.transform.position = new Vector3(x, y, z);
         }
 
+        // Restore the dialogue completion state.
+        if (PlayerPrefs.HasKey("MainScene_DialogueCompleted"))
+        {
+            isDialogueCompleted = PlayerPrefs.GetInt("MainScene_DialogueCompleted") == 1;
+        }
     }
 }
