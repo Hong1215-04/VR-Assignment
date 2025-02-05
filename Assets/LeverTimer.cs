@@ -8,9 +8,15 @@ public class LevelTimer : MonoBehaviour
     public float timeLimit = 300f; // 5 minutes in seconds
     public TextMeshProUGUI timerText; // Reference to the timer text
     public TextMeshProUGUI timesUpText; // Reference to the "Times Up" text
+    public AudioSource SFX;
+    public AudioSource loseSFX;
+    public AudioClip alarmSFX;
+    public AudioClip knockSFX;
 
     private float timeRemaining;
     public bool timerRunning = false;
+    private bool playingAlarm = false;
+    private bool playingKnock = false;
 
     [SerializeField] private scene_manager sm;
 
@@ -29,9 +35,33 @@ public class LevelTimer : MonoBehaviour
             {
                 UpdateTimerText();
                 timeRemaining -= Time.deltaTime;
+                if (timeRemaining <= 11)
+                {
+                    if (playingAlarm == false)
+                    {
+                        SFX.PlayOneShot(alarmSFX);
+                        playingAlarm = true;
+                    }
+                    if (timeRemaining < 5)
+                    {
+                        if (playingKnock == false)
+                        {
+                            SFX.PlayOneShot(knockSFX);
+                            playingKnock = true;
+                        }
+                    }
+                    if (timeRemaining < 1)
+                    {
+                        SFX.Stop();
+                        loseSFX.Play();
+                    }
+                }
             }
             else
             {
+                playingAlarm = false;
+                playingKnock = false;
+                
                 timerRunning = false;
                 timeRemaining = 0f;
                 UpdateTimerText();

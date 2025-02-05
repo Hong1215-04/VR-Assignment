@@ -6,6 +6,7 @@ using UnityEngine;
 public class DetactTrash_SmallBin : MonoBehaviour
 {
     public ProgressBar progressbar;
+    public AudioSource collectSFX;
 
     private GameObject trash;
     private Rigidbody body;
@@ -17,6 +18,7 @@ public class DetactTrash_SmallBin : MonoBehaviour
         {
             trash = collider.gameObject;
             progressbar.current = progressbar.current + 1;
+            collectSFX.Play();
             StartCoroutine(destroyTrash());
         }
 
