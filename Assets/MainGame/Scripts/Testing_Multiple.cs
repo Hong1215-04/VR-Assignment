@@ -28,13 +28,14 @@ public class Testing_Multiple : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
-
-    private LayerMask childobjectlm;
+    float time;
+    float timeDelay;
 
     public void Start()
     {
         anim = GetComponent<Animator>();
-        childobjectlm = GetComponentInChildren<LayerMask>();
+        time = 0f;
+        timeDelay = 3f;
     }
 
     private void Update()
@@ -45,6 +46,16 @@ public class Testing_Multiple : MonoBehaviour
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 
         FindNear();
+
+        time = time + 1f * Time.deltaTime;
+
+        if (time >= timeDelay)
+        {
+            time = 0f;
+            walkPointSet = false;
+        }
+
+        NearestDistance = 10000;
 
         if (!playerInSightRange && !playerInAttackRange) Patrolling();
         if (playerInSightRange && !playerInAttackRange) Find_Trash();
@@ -64,7 +75,7 @@ public class Testing_Multiple : MonoBehaviour
             }
         }
     }
-
+    
     private void Patrolling()
     {
         if (!walkPointSet) SearchWalkPoint();
