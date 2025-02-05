@@ -62,7 +62,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &6000396057768214997
 MonoBehaviour:
@@ -185,8 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trans: {fileID: 8152514402025157787}
+  levelBetweenDuration: 4
   nextSceneIndex: 1
-  looseSceneIndex: 0
+  looseSceneIndex: 1
 --- !u!1 &5477929468748667776
 GameObject:
   m_ObjectHideFlags: 0

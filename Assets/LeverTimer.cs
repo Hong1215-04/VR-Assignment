@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class LevelTimer : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LevelTimer : MonoBehaviour
 
     private float timeRemaining;
     public bool timerRunning = false;
+
+    [SerializeField] private scene_manager sm;
 
     void Start()
     {
@@ -24,13 +27,15 @@ public class LevelTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                timeRemaining -= Time.deltaTime;
                 UpdateTimerText();
+                timeRemaining -= Time.deltaTime;
             }
             else
             {
-                timeRemaining = 0;
                 timerRunning = false;
+                timeRemaining = 0f;
+                UpdateTimerText();
+                              
                 TimesUp();
             }
         }
@@ -48,5 +53,13 @@ public class LevelTimer : MonoBehaviour
     {
         timesUpText.gameObject.SetActive(true); // Show "Times Up" text
         timesUpText.text = "TimesUp";
+
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(sm.getLevelBetweenDuration());
+        sm.setNextCondition("Next");
     }
 }
