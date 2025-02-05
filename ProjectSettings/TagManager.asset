@@ -11,6 +11,7 @@ TagManager:
   - Trash
   - Anchor
   - BinBag
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 8717636247816676308}
   - component: {fileID: 4233215972956952227}
   - component: {fileID: 300189373181236276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Broom
   m_TagString: CleaningTool
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8717636247816676308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,11 +304,11 @@ MonoBehaviour:
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
   m_SmoothPosition: 1
-  m_SmoothPositionAmount: 12
+  m_SmoothPositionAmount: 15
   m_TightenPosition: 1
   m_TrackRotation: 1
   m_SmoothRotation: 1
-  m_SmoothRotationAmount: 12
+  m_SmoothRotationAmount: 15
   m_TightenRotation: 1
   m_TrackScale: 0
   m_SmoothScale: 0
