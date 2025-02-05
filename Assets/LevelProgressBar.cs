@@ -13,7 +13,6 @@ public class LevelProgressBar : MonoBehaviour
 
     private Slider progressBar; // Reference to the slider component
     private TextMeshProUGUI progressText; // Reference to the TextMeshPro component
-    [SerializeField] private float levelBetweennDuration = 5f;
     [SerializeField] private scene_manager sm;
 
     void Start()
@@ -77,7 +76,7 @@ public class LevelProgressBar : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(levelBetweennDuration);
+        yield return new WaitForSeconds(sm.getLevelBetweenDuration());
         Confetti_right.Stop();
         Confetti_left.Stop();
         sm.setNextCondition("Next");  

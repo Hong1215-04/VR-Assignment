@@ -8,6 +8,7 @@ public class scene_manager : MonoBehaviour
     private string nextCondition = "";
     [SerializeField] private Animator trans;
     private float transitionDuration = 1f;
+    [SerializeField] private float levelBetweenDuration = 4f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
     [SerializeField] private int looseSceneIndex; // level go when "Loose"
 
@@ -45,6 +46,11 @@ public class scene_manager : MonoBehaviour
         setNextCondition("Next");
     }
 
+    public void StartLevel()
+    {
+        nextSceneIndex = 2;
+    }
+
     public void QuitGame()
     {
         PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
@@ -55,5 +61,9 @@ public class scene_manager : MonoBehaviour
 
     public string getNextCondition() { return nextCondition; }
     public void setNextCondition(string nCond) { nextCondition = nCond; }
+    public float getLevelBetweenDuration() { return levelBetweenDuration; }
+    public void setLevelBetweenDuration(float t) { levelBetweenDuration = t; }
+
+    public void setNextSceneIndex(int i) { nextSceneIndex = i; }
 
 }
