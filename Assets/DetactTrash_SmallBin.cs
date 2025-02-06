@@ -12,30 +12,36 @@ public class DetactTrash_SmallBin : MonoBehaviour
     private Rigidbody body;
 
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("Trash"))
-        {
-            trash = collider.gameObject;
-            progressbar.current = progressbar.current + 1;
-            collectSFX.Play();
-            StartCoroutine(destroyTrash());
-        }
+    //private void OnTriggerEnter(Collider collider)
+    //{
+    //    List<GameObject> trashes = new List<GameObject>();
+    //    trashes.Add(collider.gameObject);
 
-    }
+    //    foreach (GameObject trash in trashes)
+    //    {
+    //        Debug.Log("list" + trash.name);
+    //        if (trash.CompareTag("Trash"))
+    //        {
+    //            Debug.Log(trash.name);
+    //            progressbar.current = progressbar.current + 1;
+    //            StartCoroutine(destroyTrash(trash));
+    //        }
+    //    }
+    //}
 
-    private IEnumerator destroyTrash()
-    {
-        yield return new WaitForSeconds(2);
+    //private IEnumerator destroyTrash(GameObject trash)
+    //{
+    //    yield return new WaitForSeconds(1);
 
-        Destroy(trash);
+    //    Debug.Log(trash.name);
+    //    Destroy(trash);
 
-        if (progressbar.current >= progressbar.max)
-        {
-            Debug.Log("Is Full");
-            GetComponent<Collider>().isTrigger = false;
-        }
-    }
+    //    if (progressbar.current >= progressbar.max)
+    //    {
+    //        Debug.Log("Is Full");
+    //        GetComponent<Collider>().isTrigger = false;
+    //    }
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
