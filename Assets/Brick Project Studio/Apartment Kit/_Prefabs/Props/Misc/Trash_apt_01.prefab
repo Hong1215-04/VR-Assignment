@@ -1370,12 +1370,20 @@ PrefabInstance:
       objectReference: {fileID: 2852570186375467720}
     - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: current
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: outline
       value: 
       objectReference: {fileID: 1877730375309077819}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: trashDetact
+      value: 
+      objectReference: {fileID: 7504354303265993407}
+    - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
+      propertyPath: plasticbagSFX
+      value: 
+      objectReference: {fileID: 8448199114789841019}
     - target: {fileID: 1007393501604411282, guid: 72fe89a52d64d06439b328d0822ead35, type: 3}
       propertyPath: trash.Array.size
       value: 2

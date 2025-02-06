@@ -15,6 +15,7 @@ public class ProgressBar : MonoBehaviour
     public GameObject[] trash;
     public Transform trash_spawnPoint;
     public AudioSource plasticbagSFX;
+    public GameObject trashDetact;
 
     // Update is called once per frame
     void Update()
@@ -58,6 +59,7 @@ public class ProgressBar : MonoBehaviour
             current = 0;
             fill.color = Color.white;
             outline.color = Color.white;
+            trashDetact.GetComponent<Collider>().isTrigger = true;
             plasticbagSFX.Play();   
         }
     }
