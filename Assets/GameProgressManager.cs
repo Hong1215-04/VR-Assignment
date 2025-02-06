@@ -11,11 +11,11 @@ public class GameProgressManager : MonoBehaviour
 
     private int totalStains; // Total number of stains in the scene
     private int totalTrash; // Total number of trash items in the scene
-    private int totalAI; // Total number of AI items in the scene
+    private int totalCockroach; // Total number of cockroach items in the scene
     private int progressTrashUnits; // Number of trash units contributing to progress
     private int cleanedStains = 0; // Counter for cleaned stains
     private int cleanedTrash = 0; // Counter for cleaned trash
-    private int cleanedAI = 0; // Counter for cleaned AI
+    private int cleanedCockroach = 0; // Counter for cleaned cockroach
 
     public delegate void ProgressUpdated(); // Delegate for progress update event
     public event ProgressUpdated OnProgressUpdated; // Event triggered on progress update
@@ -36,7 +36,7 @@ public class GameProgressManager : MonoBehaviour
 
         InitializeStainCount(); // Initialize stain count at the start
         InitializeTrashCount(); // Initialize trash count at the start
-        InitializeAICount(); // Initialize AI count at the start
+        InitializeCockroachCount(); // Initialize cockroach count at the start
     }
 
     void Start()
@@ -70,13 +70,13 @@ public class GameProgressManager : MonoBehaviour
         }
     }
 
-    void InitializeAICount()
+    void InitializeCockroachCount()
     {
-        // Find all game objects with the tag "AI" and count them
-        totalAI = 0; //GameObject.FindGameObjectsWithTag("AI").Length;
-        if (totalAI == 0)
+        // Find all game objects with the tag "Cockroach" and count them
+        totalCockroach = GameObject.FindGameObjectsWithTag("Cockroach").Length;
+        if (totalCockroach == 0)
         {
-            Debug.LogWarning("No AI found in the scene! Check if AI objects have been instantiated.");
+            Debug.LogWarning("No cockroach found in the scene! Check if cockroach objects have been instantiated.");
         }
     }
 
@@ -84,15 +84,15 @@ public class GameProgressManager : MonoBehaviour
     {
         if (progressBar != null)
         {
-            // Set progress bar max value to the total number of tasks (stains + progress trash units + AI)
-            progressBar.maxValue = totalStains + progressTrashUnits + totalAI;
+            // Set progress bar max value to the total number of tasks (stains + progress trash units + cockroach)
+            progressBar.maxValue = totalStains + progressTrashUnits + totalCockroach;
             progressBar.value = 0; // Initialize progress bar value to 0
         }
 
         if (progressText != null)
         {
             // Set initial progress text
-            progressText.text = $"0/{totalStains + progressTrashUnits + totalAI}";
+            progressText.text = $"0/{totalStains + progressTrashUnits + totalCockroach}";
         }
     }
 
@@ -109,9 +109,9 @@ public class GameProgressManager : MonoBehaviour
         UpdateProgress(); // Update the progress bar and text
     }
 
-    public void CleanAI()
+    public void CleanCockroach()
     {
-        cleanedAI++; // Increment cleaned AI count
+        cleanedCockroach++; // Increment cleaned cockroach count
         UpdateProgress(); // Update the progress bar and text
     }
 
@@ -120,13 +120,13 @@ public class GameProgressManager : MonoBehaviour
         if (progressBar != null)
         {
             // Update progress bar value
-            progressBar.value = cleanedStains + cleanedTrash + cleanedAI;
+            progressBar.value = cleanedStains + cleanedTrash + cleanedCockroach;
         }
 
         if (progressText != null)
         {
             // Check if all tasks are completed
-            if (cleanedStains + cleanedTrash + cleanedAI == progressBar.maxValue)
+            if (cleanedStains + cleanedTrash + cleanedCockroach == progressBar.maxValue)
             {
                 Debug.Log("checked");
                 progressText.text = "Level Completed"; // Display level completion text
@@ -135,7 +135,7 @@ public class GameProgressManager : MonoBehaviour
             else
             {
                 // Update progress text with current counts
-                progressText.text = $"{cleanedStains + cleanedTrash + cleanedAI}/{totalStains + progressTrashUnits + totalAI}";
+                progressText.text = $"{cleanedStains + cleanedTrash + cleanedCockroach}/{totalStains + progressTrashUnits + totalCockroach}";
             }
         }
 
@@ -144,11 +144,11 @@ public class GameProgressManager : MonoBehaviour
 
     public int GetCurrentProgress()
     {
-        return cleanedStains + cleanedTrash + cleanedAI; // Return current progress
+        return cleanedStains + cleanedTrash + cleanedCockroach; // Return current progress
     }
 
     public int GetTotalTargets()
     {
-        return totalStains + progressTrashUnits + totalAI; // Return total number of targets
+        return totalStains + progressTrashUnits + totalCockroach; // Return total number of targets
     }
 }

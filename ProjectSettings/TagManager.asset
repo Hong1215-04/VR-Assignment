@@ -13,6 +13,7 @@ TagManager:
   - BinBag
   - Door
   - Soap
+  - Cockroach
   layers:
   - Default
   - TransparentFX
