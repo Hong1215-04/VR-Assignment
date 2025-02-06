@@ -381,13 +381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83821e37f39012c41bf1e033654a9102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 20
+  timeLimit: 15
   timerText: {fileID: 2333965855854225911}
   timesUpText: {fileID: 1477097053556142783}
   SFX: {fileID: 6800118282182609006}
   loseSFX: {fileID: 4159257743132147671}
   alarmSFX: {fileID: 8300000, guid: a3f3ba1e7788f91418b786d3765e9d63, type: 3}
   knockSFX: {fileID: 8300000, guid: 8feeb9f673207cf4c8ffa4d97b59d805, type: 3}
+  alarmLight: {fileID: 0}
   timerRunning: 0
   sm: {fileID: 0}
 --- !u!82 &6800118282182609006

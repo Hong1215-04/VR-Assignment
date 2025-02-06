@@ -110402,12 +110402,12 @@ PrefabInstance:
       objectReference: {fileID: 894364936}
     - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: timeLimit
-
-      value: 300
-
-      value: 100
-      80404426730a0389c3e2e1dc62227498b8479b42
+      value: 360
       objectReference: {fileID: 0}
+    - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: alarmLight
+      value: 
+      objectReference: {fileID: 299639868}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
