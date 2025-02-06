@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.Experimental.GlobalIllumination;
+using System.Globalization;
 
 public class LevelTimer : MonoBehaviour
 {
@@ -12,11 +14,14 @@ public class LevelTimer : MonoBehaviour
     public AudioSource loseSFX;
     public AudioClip alarmSFX;
     public AudioClip knockSFX;
+    public Light alarmLight;
 
     private float timeRemaining;
     public bool timerRunning = false;
+    private float lightTimer;
     private bool playingAlarm = false;
     private bool playingKnock = false;
+    private bool isLightRed = false;
 
     [SerializeField] private scene_manager sm;
 
@@ -37,11 +42,29 @@ public class LevelTimer : MonoBehaviour
                 timeRemaining -= Time.deltaTime;
                 if (timeRemaining <= 11)
                 {
+                    lightTimer += Time.deltaTime;
+                    if (isLightRed == false)
+                    { 
+                        alarmLight.color = Color.red;  
+                    }
+                    else if (isLightRed == true) 
+                    {
+                        alarmLight.color= Color.white;
+                    }
+                    
+                    if (lightTimer > 1)
+                    {
+                        isLightRed = !isLightRed;
+                        lightTimer = 0;
+                    }
+                    
+
                     if (playingAlarm == false)
                     {
                         SFX.PlayOneShot(alarmSFX);
                         playingAlarm = true;
                     }
+
                     if (timeRemaining < 5)
                     {
                         if (playingKnock == false)
@@ -50,6 +73,9 @@ public class LevelTimer : MonoBehaviour
                             playingKnock = true;
                         }
                     }
+
+                    
+
                     if (timeRemaining < 1)
                     {
                         SFX.Stop();
