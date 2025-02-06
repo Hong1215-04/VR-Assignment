@@ -9,10 +9,7 @@ public class PauseManager : MonoBehaviour
     public GameObject settingsMenuUI;
     public InputActionReference menuButton;
 
-
     private bool isPaused = false;
-    // This flag prevents multiple toggles when the menu button is held down
-    private bool menuButtonPressedLastFrame = false;
 
     void Start()
     {
