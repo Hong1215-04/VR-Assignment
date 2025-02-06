@@ -37,7 +37,7 @@ public class Testing_Multiple : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         time = 0f;
-        timeDelay = 3f;
+        timeDelay = 2.5f;
     }
 
     private void Update()

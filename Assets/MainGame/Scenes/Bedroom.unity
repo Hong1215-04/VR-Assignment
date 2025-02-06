@@ -45157,7 +45157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 630275934243427295, guid: e42ad6a6eaf367047aede477d268a0f2, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Trash
       objectReference: {fileID: 0}
     - target: {fileID: 7880418209691261609, guid: e42ad6a6eaf367047aede477d268a0f2, type: 3}
       propertyPath: m_LocalPosition.x
