@@ -110406,7 +110406,7 @@ PrefabInstance:
       value: 300
 
       value: 100
-
+      80404426730a0389c3e2e1dc62227498b8479b42
       objectReference: {fileID: 0}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
