@@ -47,7 +47,7 @@ public class GameProgressManager : MonoBehaviour
     void InitializeStainCount()
     {
         // Find all game objects with the tag "Stain" and count them
-        totalStains = 1;  //GameObject.FindGameObjectsWithTag("Stain").Length;
+        totalStains = GameObject.FindGameObjectsWithTag("Stain").Length;
 
         if (totalStains == 0)
         {
@@ -58,7 +58,7 @@ public class GameProgressManager : MonoBehaviour
     void InitializeTrashCount()
     {
         // Find all game objects with the tag "Trash" and count them
-        totalTrash = 0; //GameObject.FindGameObjectsWithTag("Trash").Length;
+        totalTrash = GameObject.FindGameObjectsWithTag("Trash").Length;
         if (totalTrash == 0)
         {
             Debug.LogWarning("No trash found in the scene! Check if trash has been instantiated.");
