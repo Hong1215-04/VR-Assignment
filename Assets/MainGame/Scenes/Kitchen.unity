@@ -10408,7 +10408,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 64538279}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -10438,7 +10450,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -10610,7 +10622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb8471cf897709469a580a5ba35365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washingAudio: {fileID: 64538282}
 --- !u!82 &64538282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10622,7 +10633,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6a3e71a2aff54ad4da17ca7d46c10703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -45932,7 +45943,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320243344}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -45962,7 +45985,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -46134,7 +46157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb8471cf897709469a580a5ba35365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washingAudio: {fileID: 320243347}
 --- !u!82 &320243347
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46146,7 +46168,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6a3e71a2aff54ad4da17ca7d46c10703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -90677,7 +90699,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642491856}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -90707,7 +90741,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -90879,7 +90913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb8471cf897709469a580a5ba35365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washingAudio: {fileID: 642491859}
 --- !u!82 &642491859
 AudioSource:
   m_ObjectHideFlags: 0
@@ -90891,7 +90924,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6a3e71a2aff54ad4da17ca7d46c10703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -160687,7 +160720,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d52f91bd3a03626419bb55808c25f969, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.002
+      value: 9.455
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d52f91bd3a03626419bb55808c25f969, type: 3}
       propertyPath: m_LocalPosition.y
@@ -160695,7 +160728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d52f91bd3a03626419bb55808c25f969, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.866
+      value: -12.6758
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d52f91bd3a03626419bb55808c25f969, type: 3}
       propertyPath: m_LocalRotation.w
@@ -205574,7 +205607,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1455337272}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -205604,7 +205649,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -205776,7 +205821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb8471cf897709469a580a5ba35365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washingAudio: {fileID: 1455337275}
 --- !u!82 &1455337275
 AudioSource:
   m_ObjectHideFlags: 0
@@ -205788,7 +205832,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6a3e71a2aff54ad4da17ca7d46c10703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -284640,7 +284684,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2013829628}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -284670,7 +284726,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -284842,7 +284898,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb8471cf897709469a580a5ba35365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  washingAudio: {fileID: 2013829630}
 --- !u!82 &2013829630
 AudioSource:
   m_ObjectHideFlags: 0
@@ -284854,7 +284909,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6a3e71a2aff54ad4da17ca7d46c10703, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -301156,7 +301211,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -309993,6 +310048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cockroach
       objectReference: {fileID: 0}
+    - target: {fileID: 5978309693010226215, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
+      propertyPath: killingAudio
+      value: 
+      objectReference: {fileID: 9070540896509803177}
     - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.867691
@@ -310057,7 +310116,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: c742a074f09a57843abd829a9ed880d0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

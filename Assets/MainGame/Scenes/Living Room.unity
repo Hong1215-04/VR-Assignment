@@ -127188,11 +127188,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 646888896587959858, guid: 5aac716a11271124887a33ec1836f27b, type: 3}
   m_PrefabInstance: {fileID: 898723183}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &899081072 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 627225348511164229, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 441087506}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899379141
 GameObject:
   m_ObjectHideFlags: 0
@@ -222065,11 +222060,6 @@ Transform:
   - {fileID: 1681585669}
   m_Father: {fileID: 732190542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1579304315 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2887704388304865928, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 441087506}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1579775272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243451,7 +243441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245825,11 +245815,11 @@ PrefabInstance:
     - target: {fileID: 8292269806580654967, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: Confetti_left
       value: 
-      objectReference: {fileID: 1579304315}
+      objectReference: {fileID: 0}
     - target: {fileID: 8292269806580654967, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: Confetti_right
       value: 
-      objectReference: {fileID: 899081072}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
