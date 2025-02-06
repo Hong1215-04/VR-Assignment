@@ -12,6 +12,7 @@ TagManager:
   - Anchor
   - BinBag
   - Door
+  - Soap
   layers:
   - Default
   - TransparentFX

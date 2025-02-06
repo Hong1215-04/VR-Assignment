@@ -42,8 +42,8 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Update()
     {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, childlayer.layer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, childlayer.layer);
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 
