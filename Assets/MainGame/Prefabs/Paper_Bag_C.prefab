@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: -7770775461347880407}
   m_Layer: 0
   m_Name: Paper_Bag_C
-  m_TagString: Untagged
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

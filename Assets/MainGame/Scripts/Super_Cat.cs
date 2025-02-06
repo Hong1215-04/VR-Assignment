@@ -14,7 +14,7 @@ public class Testing_Multiple : MonoBehaviour
 
     public Animator anim;
 
-    public LayerMask whatIsGround, whatIsPlayer;
+    public LayerMask whatIsGround, whatIsPlayer, Door;
 
     //Patrolling (walkPointRange = how_far_can_it_go)
     public Vector3 walkPoint;
@@ -24,17 +24,17 @@ public class Testing_Multiple : MonoBehaviour
     //Attacking 
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    bool alreadySit;
 
     //States
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange, attackRange, DoorRange;
+    public bool playerInSightRange, playerInAttackRange, DoorInAttackRange;
     float time;
     float timeDelay;
 
-    public GameObject childlayer;
-
     public void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         time = 0f;
         timeDelay = 3f;
@@ -44,6 +44,7 @@ public class Testing_Multiple : MonoBehaviour
     {
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        DoorInAttackRange = Physics.CheckSphere(transform.position, DoorRange, Door);
 
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 
@@ -59,9 +60,10 @@ public class Testing_Multiple : MonoBehaviour
 
         NearestDistance = 10000;
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) Find_Trash();
-        if (playerInSightRange && playerInAttackRange) Founded();
+        if (!playerInSightRange && !playerInAttackRange && !DoorInAttackRange) Patrolling();
+        if (playerInSightRange && !playerInAttackRange && !DoorInAttackRange) Find_Trash();
+        if (playerInSightRange && playerInAttackRange && !DoorInAttackRange) Founded();
+        if (DoorInAttackRange) Waited();
     }
 
     private void FindNear()
@@ -130,5 +132,24 @@ public class Testing_Multiple : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    private void Waited()
+    {
+        agent.SetDestination(transform.position);
+
+        if (!alreadySit)
+        {
+            anim.Play("sit");
+
+            alreadySit = true;
+            //Invoke = CallOn
+            Invoke(nameof(ResetSit), timeBetweenAttacks);
+        }
+    }
+
+    private void ResetSit()
+    {
+        alreadySit = false;
     }
 }

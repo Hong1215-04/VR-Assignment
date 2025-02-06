@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 5482732346820176038}
   m_Layer: 0
   m_Name: Pieces_of_paper_G
-  m_TagString: Untagged
+  m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
