@@ -34,10 +34,11 @@ public class scrip : MonoBehaviour
             }
             else if (currentStep >= cleaningSteps)
             {
+                currentStep = 0;
+                Destroy(gameObject);
+                
                 // **清理完成，通知 GameProgressManager**
                 GameProgressManager.Instance.CleanStain();
-
-                Destroy(gameObject);
             }
         }
     }
