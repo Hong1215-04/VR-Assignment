@@ -16,36 +16,36 @@ public class DetactTrash_SmallBin : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        List<GameObject> trashes = new List<GameObject>();
-        trashes.Add(collider.gameObject);
+    //private void OnTriggerEnter(Collider collider)
+    //{
+    //    List<GameObject> trashes = new List<GameObject>();
+    //    trashes.Add(collider.gameObject);
 
-        foreach (GameObject trash in trashes)
-        {
-            Debug.Log("list" + trash.name);
-            if (trash.CompareTag("Trash"))
-            {
-                Debug.Log(trash.name);
-                progressbar.current = progressbar.current + 1;
-                StartCoroutine(destroyTrash(trash));
-            }
-        }
-    }
+    //    foreach (GameObject trash in trashes)
+    //    {
+    //        Debug.Log("list" + trash.name);
+    //        if (trash.CompareTag("Trash"))
+    //        {
+    //            Debug.Log(trash.name);
+    //            progressbar.current = progressbar.current + 1;
+    //            StartCoroutine(destroyTrash(trash));
+    //        }
+    //    }
+    //}
 
-    private IEnumerator destroyTrash(GameObject trash)
-    {
-        yield return new WaitForSeconds(1);
+    //private IEnumerator destroyTrash(GameObject trash)
+    //{
+    //    yield return new WaitForSeconds(1);
 
-        Debug.Log(trash.name);
-        Destroy(trash);
+    //    Debug.Log(trash.name);
+    //    Destroy(trash);
 
-        if (progressbar.current >= progressbar.max)
-        {
-            Debug.Log("Is Full");
-            GetComponent<Collider>().isTrigger = false;
-        }
-    }
+    //    if (progressbar.current >= progressbar.max)
+    //    {
+    //        Debug.Log("Is Full");
+    //        GetComponent<Collider>().isTrigger = false;
+    //    }
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
