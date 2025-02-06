@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83821e37f39012c41bf1e033654a9102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 15
+  timeLimit: 360
   timerText: {fileID: 2333965855854225911}
   timesUpText: {fileID: 1477097053556142783}
   SFX: {fileID: 6800118282182609006}
