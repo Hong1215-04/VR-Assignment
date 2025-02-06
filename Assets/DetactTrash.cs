@@ -1,10 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DetactTrash : MonoBehaviour
 {
-    private GameObject trash;
-
     private void OnTriggerEnter(Collider collider)
     {
         List<GameObject> trashes = new List<GameObject>();
