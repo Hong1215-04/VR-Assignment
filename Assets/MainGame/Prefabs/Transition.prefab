@@ -62,7 +62,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &6000396057768214997
 MonoBehaviour:
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trans: {fileID: 8152514402025157787}
+  levelBetweenDuration: 4
   nextSceneIndex: 1
-  looseSceneIndex: 0
-  sm: {fileID: 0}
+  looseSceneIndex: 1
 --- !u!1 &5477929468748667776
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,8 +249,8 @@ RectTransform:
   m_GameObject: {fileID: 8433483056698508341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5343279263758235167}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

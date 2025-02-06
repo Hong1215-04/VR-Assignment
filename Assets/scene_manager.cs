@@ -8,9 +8,9 @@ public class scene_manager : MonoBehaviour
     private string nextCondition = "";
     [SerializeField] private Animator trans;
     private float transitionDuration = 1f;
+    [SerializeField] private float levelBetweenDuration = 4f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
     [SerializeField] private int looseSceneIndex; // level go when "Loose"
-    private MainSceneStateManager msManager;
 
     private void Update()
     {
@@ -41,18 +41,29 @@ public class scene_manager : MonoBehaviour
 
     }
 
-    public void startGame()
+    public void StartGame()
     {
         setNextCondition("Next");
     }
 
-    public void quitGame()
+    public void StartLevel()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        nextSceneIndex = 2;
+    }
+
+    public void QuitGame()
+    {
+        PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
+        PlayerPrefs.Save();
+        UnityEditor.EditorApplication.isPlaying = false;   
         Application.Quit();
     }
 
     public string getNextCondition() { return nextCondition; }
     public void setNextCondition(string nCond) { nextCondition = nCond; }
+    public float getLevelBetweenDuration() { return levelBetweenDuration; }
+    public void setLevelBetweenDuration(float t) { levelBetweenDuration = t; }
+
+    public void setNextSceneIndex(int i) { nextSceneIndex = i; }
 
 }

@@ -1,43 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class DetactTrash_SmallBin : MonoBehaviour
 {
     public ProgressBar progressbar;
+    public AudioSource collectSFX;
 
+    private GameObject trash;
     private Rigidbody body;
 
-    private void Update()
-    {
-        if (progressbar.current < progressbar.max)
-        {
-            GetComponent<Collider>().isTrigger = true;
-        }
-    }
 
     private void OnTriggerEnter(Collider collider)
     {
-        List<GameObject> trashes = new List<GameObject>();
-        trashes.Add(collider.gameObject);
-
-        foreach (GameObject trash in trashes)
+        if (collider.CompareTag("Trash"))
         {
-            Debug.Log("list" + trash.name);
-            if (trash.CompareTag("Trash"))
-            {
-                Debug.Log(trash.name);
-                progressbar.current = progressbar.current + 1;
-                StartCoroutine(destroyTrash(trash));
-            }
+            trash = collider.gameObject;
+            progressbar.current = progressbar.current + 1;
+            collectSFX.Play();
+            StartCoroutine(destroyTrash());
         }
+
     }
 
-    private IEnumerator destroyTrash(GameObject trash)
+    private IEnumerator destroyTrash()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
-        Debug.Log(trash.name);
         Destroy(trash);
 
         if (progressbar.current >= progressbar.max)

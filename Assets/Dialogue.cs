@@ -13,12 +13,14 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public GameObject playerMovement;
+    public AudioSource dialogueSFX;
 
     private int index;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(PlayerPrefs.GetInt("MainScene_DialogueCompleted", 0));
         // Check if dialogue has already been completed
         if (PlayerPrefs.GetInt("MainScene_DialogueCompleted", 0) == 1)
         {
@@ -31,7 +33,7 @@ public class Dialogue : MonoBehaviour
         // Otherwise, start the dialogue and disable player movement
         playerMovement.SetActive(false);
         textComponent.text = string.Empty;
-        StartDialogue();
+        Invoke("StartDialogue", 1.5f);
     }
 
     void StartDialogue()
@@ -42,11 +44,13 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        dialogueSFX.Play();
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        dialogueSFX.Stop();
     }
 
     void NextLine()

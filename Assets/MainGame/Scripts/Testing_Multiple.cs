@@ -31,6 +31,8 @@ public class Testing_Multiple : MonoBehaviour
     float time;
     float timeDelay;
 
+    public GameObject childlayer;
+
     public void Start()
     {
         anim = GetComponent<Animator>();
@@ -40,8 +42,8 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Update()
     {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, childlayer.layer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, childlayer.layer);
 
         AllTrash = GameObject.FindGameObjectsWithTag("Trash");
 

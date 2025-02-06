@@ -1,15 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class LevelTimer : MonoBehaviour
 {
     public float timeLimit = 300f; // 5 minutes in seconds
     public TextMeshProUGUI timerText; // Reference to the timer text
     public TextMeshProUGUI timesUpText; // Reference to the "Times Up" text
+    public AudioSource SFX;
+    public AudioSource loseSFX;
+    public AudioClip alarmSFX;
+    public AudioClip knockSFX;
 
     private float timeRemaining;
     public bool timerRunning = false;
+    private bool playingAlarm = false;
+    private bool playingKnock = false;
+
+    [SerializeField] private scene_manager sm;
 
     void Start()
     {
@@ -24,13 +33,39 @@ public class LevelTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                timeRemaining -= Time.deltaTime;
                 UpdateTimerText();
+                timeRemaining -= Time.deltaTime;
+                if (timeRemaining <= 11)
+                {
+                    if (playingAlarm == false)
+                    {
+                        SFX.PlayOneShot(alarmSFX);
+                        playingAlarm = true;
+                    }
+                    if (timeRemaining < 5)
+                    {
+                        if (playingKnock == false)
+                        {
+                            SFX.PlayOneShot(knockSFX);
+                            playingKnock = true;
+                        }
+                    }
+                    if (timeRemaining < 1)
+                    {
+                        SFX.Stop();
+                        loseSFX.Play();
+                    }
+                }
             }
             else
             {
-                timeRemaining = 0;
+                playingAlarm = false;
+                playingKnock = false;
+                
                 timerRunning = false;
+                timeRemaining = 0f;
+                UpdateTimerText();
+                              
                 TimesUp();
             }
         }
@@ -48,5 +83,13 @@ public class LevelTimer : MonoBehaviour
     {
         timesUpText.gameObject.SetActive(true); // Show "Times Up" text
         timesUpText.text = "TimesUp";
+
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(sm.getLevelBetweenDuration());
+        sm.setNextCondition("Next");
     }
 }

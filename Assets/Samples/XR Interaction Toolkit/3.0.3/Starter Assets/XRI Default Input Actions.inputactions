@@ -328,6 +328,15 @@
             "id": "5fe596f9-1b7b-49b7-80a7-3b5195caf74d",
             "actions": [
                 {
+                    "name": "MenButton",
+                    "type": "Button",
+                    "id": "503440b6-f40e-42aa-94f4-5a4979dd1515",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Position",
                     "type": "Value",
                     "id": "83a7af0b-87e3-42c3-a909-95fbf8091e4f",
@@ -696,6 +705,28 @@
                     "action": "Thumbstick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd24fa4b-d65d-45b6-a51d-de91c96efcf0",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be4c88f7-8a4d-4175-aa31-c7ebdd1e35c4",
+                    "path": "<XRSimulatedController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -707,7 +738,7 @@
                     "name": "Select",
                     "type": "Button",
                     "id": "33754c03-48ec-46ef-9bc6-22ed6bfdd8e8",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
