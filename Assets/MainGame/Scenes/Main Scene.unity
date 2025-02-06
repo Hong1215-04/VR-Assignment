@@ -59118,7 +59118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: 5:00'
+  m_text: 'Time: 4:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}
   m_sharedMaterial: {fileID: -4728311159617728120, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}
@@ -145804,7 +145804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: 5:00'
+  m_text: 'Time: 4:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}
   m_sharedMaterial: {fileID: -4728311159617728120, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}
@@ -245208,7 +245208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: 5:00'
+  m_text: 'Time: 6:00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}
   m_sharedMaterial: {fileID: -4728311159617728120, guid: 45d96d4bd24554a45a28866187bdc352, type: 2}

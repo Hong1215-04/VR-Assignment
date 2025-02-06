@@ -4553,7 +4553,7 @@ PrefabInstance:
       objectReference: {fileID: 924762445}
     - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: timeLimit
-      value: 300
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
