@@ -18,7 +18,7 @@ public class walking_sound : MonoBehaviour
 
     private void LocomotionStay(InputAction.CallbackContext context)
     {
-        if (isCanWalk)
+        if (isCanWalk.activeSelf)
         {
             if (!walkSound.isPlaying)
             {
