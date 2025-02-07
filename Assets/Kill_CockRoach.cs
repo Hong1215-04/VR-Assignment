@@ -22,10 +22,12 @@ public class Kill_CockRoach : MonoBehaviour
 
             if (currentStep >= cleaningSteps)
             {
-                // **清理完成，通知 GameProgressManager**
-                GameProgressManager.Instance.CleanStain();
-
+                currentStep = 0;
+                Debug.Log(gameObject.name);
                 Destroy(gameObject);
+
+                // **清理完成，通知 GameProgressManager**
+                GameProgressManager.Instance.CleanCockroach();
             }
         }
     }

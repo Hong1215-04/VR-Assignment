@@ -13,6 +13,8 @@ public class Testing_Multiple : MonoBehaviour
     public NavMeshAgent agent;
 
     public Animator anim;
+    public AudioSource meowSFX;
+    private bool meowPlay;
 
     public LayerMask whatIsGround, whatIsPlayer, Door;
 
@@ -37,7 +39,7 @@ public class Testing_Multiple : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         time = 0f;
-        timeDelay = 3f;
+        timeDelay = 2.5f;
     }
 
     private void Update()
@@ -111,6 +113,8 @@ public class Testing_Multiple : MonoBehaviour
     {
         agent.SetDestination(NearestOBJ.position);
         anim.Play("walk");
+        meowSFX.Pause();
+        meowPlay = false;
     }
 
     private void Founded()
@@ -122,6 +126,12 @@ public class Testing_Multiple : MonoBehaviour
         if (!alreadyAttacked)
         {
             anim.Play("sit");
+            anim.Play("sitting");
+            if (meowPlay == false)
+            {
+                meowSFX.Play();
+                meowPlay = true;
+            }
 
             alreadyAttacked = true;
             //Invoke = CallOn
@@ -141,6 +151,12 @@ public class Testing_Multiple : MonoBehaviour
         if (!alreadySit)
         {
             anim.Play("sit");
+            anim.Play("sitting");
+            if (meowPlay == false)
+            {
+                meowSFX.Play();
+                meowPlay = true;
+            }
 
             alreadySit = true;
             //Invoke = CallOn
