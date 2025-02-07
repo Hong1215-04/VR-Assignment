@@ -272590,6 +272590,10 @@ PrefabInstance:
       propertyPath: attackRange
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3484370223812217519, guid: 77bd978bc02bd8145876326638f2420f, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4972942376337877712, guid: 77bd978bc02bd8145876326638f2420f, type: 3}
       propertyPath: m_Name
       value: cat
