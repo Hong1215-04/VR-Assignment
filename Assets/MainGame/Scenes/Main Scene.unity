@@ -75195,6 +75195,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1803545553}
+    - target: {fileID: 8318761399831553552, guid: 3c091d51e5834db4488b41569feca463, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8433483056698508341, guid: 3c091d51e5834db4488b41569feca463, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -157319,7 +157323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1131554407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157401,7 +157405,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131554406}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 1803545553}
