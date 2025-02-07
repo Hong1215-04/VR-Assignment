@@ -245873,7 +245873,7 @@ PrefabInstance:
       objectReference: {fileID: 647455970}
     - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: timeLimit
-      value: 300
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: alarmLight
