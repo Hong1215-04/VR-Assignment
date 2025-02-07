@@ -9,7 +9,7 @@ public class MainSceneStateManager : MonoBehaviour
     public GameObject player; // Reference to the player GameObject in MainScene.
     public bool isDialogueCompleted; // Flag for dialogue completion.
     private bool timerRunning = true;
-    private float time = 30f;
+    private float time = 60f;
     [SerializeField] private GameObject reminder;
 
     private void Update()
