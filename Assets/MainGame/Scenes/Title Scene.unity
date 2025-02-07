@@ -4144,7 +4144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
-  creditScreenCanvas: {fileID: 0}
+  creditScreenCanvas: {fileID: 168067870}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
