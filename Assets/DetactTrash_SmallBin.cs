@@ -26,23 +26,17 @@ public class DetactTrash_SmallBin : MonoBehaviour
                 {
                     collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
                 }
-                progressbar.current = progressbar.current + 1;
-                StartCoroutine(destroyTrash(trash));
+                Destroy(trash);
+                if (progressbar.current >= progressbar.max)
+                {
+                    Debug.Log("Is Full");
+                    GetComponent<Collider>().isTrigger = false;
+                }
+                else
+                {
+                    progressbar.current = progressbar.current + 1;
+                }
             }
-        }
-    }
-
-    private IEnumerator destroyTrash(GameObject trash)
-    {
-        yield return new WaitForSeconds(1);
-
-        Debug.Log(trash.name);
-        Destroy(trash);
-
-        if (progressbar.current >= progressbar.max)
-        {
-            Debug.Log("Is Full");
-            GetComponent<Collider>().isTrigger = false;
         }
     }
 

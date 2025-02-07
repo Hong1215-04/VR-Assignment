@@ -66,7 +66,7 @@ public class GameProgressManager : MonoBehaviour
         else
         {
             // Calculate the number of trash units contributing to progress
-            progressTrashUnits = Mathf.CeilToInt((float)totalTrash / 5);
+            progressTrashUnits = Mathf.CeilToInt((float)totalTrash / 10);
         }
     }
 
