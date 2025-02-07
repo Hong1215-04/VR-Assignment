@@ -63096,6 +63096,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &441087510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 58445280694286476, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &441087512 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5608426078181738906, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -101791,6 +101796,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4746574046927748350, guid: a1a5c6c9007efa348b1c7dd3e3039972, type: 3}
   m_PrefabInstance: {fileID: 723434826}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &723692210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 348384014825143185, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_Name
+      value: Walk Sound Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.423837
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32295692
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717260621781624823, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: isCanWalk
+      value: 
+      objectReference: {fileID: 441087510}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: baeec7cad42cc2f42991247776959630, type: 3}
 --- !u!1001 &724041908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186230,6 +186296,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1803545553}
+    - target: {fileID: 3407627473582477605, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 441087510}
     - target: {fileID: 5724931296190776755, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
       propertyPath: m_Name
       value: Pause Manager
@@ -309273,4 +309343,5 @@ SceneRoots:
   - {fileID: 1069247150}
   - {fileID: 1755459445}
   - {fileID: 394250550}
+  - {fileID: 723692210}
   - {fileID: 1556291920}
