@@ -8,6 +8,7 @@ public class GameProgressManager : MonoBehaviour
 
     public Slider progressBar; // Reference to the UI progress bar
     public TextMeshProUGUI progressText; // Reference to the progress text
+    public AudioSource taskIncreaseSFX; // Play sfx when task increase by 1
 
     private int totalStains; // Total number of stains in the scene
     private int totalTrash; // Total number of trash items in the scene
@@ -136,6 +137,7 @@ public class GameProgressManager : MonoBehaviour
             {
                 // Update progress text with current counts
                 progressText.text = $"{cleanedStains + cleanedTrash + cleanedCockroach}/{totalStains + progressTrashUnits + totalCockroach}";
+                taskIncreaseSFX.Play();
             }
         }
 
