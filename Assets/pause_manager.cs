@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
     public GameObject pauseMenuUI;
     public GameObject settingsMenuUI;
     public InputActionReference menuButton;
+    public GameObject playerMovement;
 
     private bool isPaused = false;
 
@@ -37,6 +38,7 @@ public class PauseManager : MonoBehaviour
     // Pause the game: show the pause menu and freeze time
     public void PauseGame()
     {
+        playerMovement.SetActive(false);
         pauseMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
 
@@ -47,6 +49,7 @@ public class PauseManager : MonoBehaviour
     // Resume the game: hide menus and unfreeze time
     public void ResumeGame()
     {
+        playerMovement.SetActive(true);
         pauseMenuUI.SetActive(false);
         settingsMenuUI.SetActive(false);
 

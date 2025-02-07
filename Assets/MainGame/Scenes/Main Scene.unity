@@ -230277,6 +230277,10 @@ PrefabInstance:
       propertyPath: menuButton
       value: 
       objectReference: {fileID: 7809618438350687927, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 3407627473582477605, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1735133974}
     - target: {fileID: 5724931296190776755, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
       propertyPath: m_Name
       value: Pause Manager
@@ -302339,6 +302343,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b14b13550a0a669479553ad1fb6564bb, type: 3}
+--- !u!1001 &1951930691182672997
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 348384014825143185, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_Name
+      value: Walk Sound Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.423837
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.13364
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32295692
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125037493907822048, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717260621781624823, guid: baeec7cad42cc2f42991247776959630, type: 3}
+      propertyPath: isCanWalk
+      value: 
+      objectReference: {fileID: 1735133974}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: baeec7cad42cc2f42991247776959630, type: 3}
 --- !u!1001 &2007174168908120138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306694,3 +306759,4 @@ SceneRoots:
   - {fileID: 1879152676}
   - {fileID: 133123698}
   - {fileID: 184094428}
+  - {fileID: 1951930691182672997}
