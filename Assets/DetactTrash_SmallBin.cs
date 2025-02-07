@@ -27,6 +27,7 @@ public class DetactTrash_SmallBin : MonoBehaviour
                     collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
                 }
                 Destroy(trash);
+                collectSFX.Play();
                 if (progressbar.current >= progressbar.max)
                 {
                     Debug.Log("Is Full");
