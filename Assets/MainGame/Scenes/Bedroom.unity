@@ -155153,6 +155153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash_apt_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5099763727980213348, guid: cd4ca976dbf626549971e19d7ef53367, type: 3}
+      propertyPath: max
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -226634,6 +226638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
+  creditScreenCanvas: {fileID: 0}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
