@@ -22,7 +22,10 @@ public class DetactTrash_SmallBin : MonoBehaviour
             Debug.Log("list" + trash.name);
             if (trash.CompareTag("Trash"))
             {
-                collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+                if (collider.gameObject.GetComponent<XRGrabInteractable>() != null)
+                {
+                    collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
+                }
                 progressbar.current = progressbar.current + 1;
                 StartCoroutine(destroyTrash(trash));
             }
