@@ -226289,6 +226289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
+  creditScreenCanvas: {fileID: 0}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
@@ -257691,7 +257692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3532377640674561683, guid: dda74d37d56503648af4244194bcbb85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0196941
+      value: 0.934
       objectReference: {fileID: 0}
     - target: {fileID: 3532377640674561683, guid: dda74d37d56503648af4244194bcbb85, type: 3}
       propertyPath: m_LocalPosition.z
