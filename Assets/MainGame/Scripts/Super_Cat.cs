@@ -111,6 +111,8 @@ public class Testing_Multiple : MonoBehaviour
 
     private void Find_Trash()
     {
+        alreadyAttacked = false;
+        alreadySit = false;
         agent.SetDestination(NearestOBJ.position);
         anim.Play("walk");
         meowSFX.Pause();
@@ -126,23 +128,22 @@ public class Testing_Multiple : MonoBehaviour
         if (!alreadyAttacked)
         {
             anim.Play("sit");
-            anim.Play("sitting");
+            alreadyAttacked = true;
             if (meowPlay == false)
             {
                 meowSFX.Play();
                 meowPlay = true;
             }
 
-            alreadyAttacked = true;
             //Invoke = CallOn
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
 
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
+    //private void ResetAttack()
+    //{
+        //alreadyAttacked = false;
+    //}
 
     private void Waited()
     {
@@ -151,21 +152,19 @@ public class Testing_Multiple : MonoBehaviour
         if (!alreadySit)
         {
             anim.Play("sit");
-            anim.Play("sitting");
+            alreadySit = true;
             if (meowPlay == false)
             {
                 meowSFX.Play();
                 meowPlay = true;
             }
-
-            alreadySit = true;
             //Invoke = CallOn
-            Invoke(nameof(ResetSit), timeBetweenAttacks);
+            //Invoke(nameof(ResetSit), timeBetweenAttacks);
         }
     }
 
-    private void ResetSit()
-    {
-        alreadySit = false;
-    }
+    //private void ResetSit()
+    //{
+        //alreadySit = false;
+    //}
 }

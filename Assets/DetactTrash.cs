@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class DetactTrash : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class DetactTrash : MonoBehaviour
             Debug.Log("list" + trash.name);
             if (trash.CompareTag("BinBag"))
             {
-                Debug.Log(trash.name);
+                collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
                 GameProgressManager.Instance.CleanTrash();
                 StartCoroutine(destroyTrash(trash));
             }

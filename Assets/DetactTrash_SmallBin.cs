@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class DetactTrash_SmallBin : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class DetactTrash_SmallBin : MonoBehaviour
             Debug.Log("list" + trash.name);
             if (trash.CompareTag("Trash"))
             {
-                Debug.Log(trash.name);
+                collider.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
                 progressbar.current = progressbar.current + 1;
                 StartCoroutine(destroyTrash(trash));
             }

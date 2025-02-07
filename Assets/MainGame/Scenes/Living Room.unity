@@ -63040,6 +63040,14 @@ PrefabInstance:
       propertyPath: m_RaycastMask.m_Bits
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 5608426078181738906, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6633590470614375518, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6640002710935096923, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: walk
       value: 
@@ -63052,6 +63060,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 756192407}
+    - target: {fileID: 8107753229099818240, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8877177980677234388, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_EnableFarCasting
       value: 1
@@ -245731,6 +245743,10 @@ PrefabInstance:
       propertyPath: timeLimit
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: alarmLight
+      value: 
+      objectReference: {fileID: 299639868}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
