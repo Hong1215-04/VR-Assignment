@@ -4555,6 +4555,10 @@ PrefabInstance:
       propertyPath: timeLimit
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: 3012533326842691643, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
+      propertyPath: alarmLight
+      value: 
+      objectReference: {fileID: 299639868}
     - target: {fileID: 3239358379674686591, guid: 15e7cf585709a874c978c19b0dce36bb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -225296,6 +225300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleScreenCanvas: {fileID: 2013584674}
   settingScreenCanvas: {fileID: 1551003149}
+  creditScreenCanvas: {fileID: 0}
 --- !u!4 &1611595685
 Transform:
   m_ObjectHideFlags: 0
