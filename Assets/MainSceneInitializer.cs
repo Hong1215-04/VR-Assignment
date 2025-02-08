@@ -6,10 +6,9 @@ public class MainSceneInitializer : MonoBehaviour
 {
     public GameObject player; 
 
-    public bool isDialogueCompleted;
-
     void Start()
     {
+        // Load player last position in Main Scene if dialogue completed before
         if(PlayerPrefs.GetInt("MainScene_DialogueCompleted") == 1)
         {
             LoadState();
@@ -17,6 +16,7 @@ public class MainSceneInitializer : MonoBehaviour
         
     }
 
+    // To safe the position of player
     void LoadState()
     {
         // Check if the player position was saved.

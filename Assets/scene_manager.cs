@@ -10,7 +10,6 @@ public class scene_manager : MonoBehaviour
     private float transitionDuration = 1f;
     [SerializeField] private float levelBetweenDuration = 4f;
     [SerializeField] private int nextSceneIndex; // level go when "Next"
-    [SerializeField] private int looseSceneIndex; // level go when "Loose"
 
     private void Update()
     {
@@ -18,13 +17,9 @@ public class scene_manager : MonoBehaviour
         {
             StartCoroutine(LoadNextScene());
         }
-        else if (string.Equals(nextCondition, "Loose"))
-        {
-            StartCoroutine(LoadLooseScene());
-        }
     }
 
-    // Show goal cut scene transition
+    // Show transition
     IEnumerator LoadNextScene()
     {
         trans.SetTrigger("Start");
@@ -32,27 +27,16 @@ public class scene_manager : MonoBehaviour
         SceneManager.LoadScene(nextSceneIndex);
     }
 
-    // Show booo cut scene transition
-    IEnumerator LoadLooseScene()
-    {
-        trans.SetTrigger("Start");
-        yield return new WaitForSeconds(transitionDuration);
-        SceneManager.LoadScene(looseSceneIndex);
-
-    }
-
+    // Function set condition to change scene
     public void StartGame()
     {
         setNextCondition("Next");
     }
 
-    public void StartLevel()
-    {
-        nextSceneIndex = 2;
-    }
-
+    // Function to quit the game
     public void QuitGame()
     {
+        // Reset the state of game before quit
         PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
         PlayerPrefs.Save();
         UnityEditor.EditorApplication.isPlaying = false;   

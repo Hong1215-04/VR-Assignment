@@ -21,12 +21,7 @@ public class PauseManager : MonoBehaviour
         menuButton.action.started += TogglePause;   
     }
 
-    void Update()
-    {
-
-    }
-
-    // Toggle pause state
+    // Function to toggle pause
     public void TogglePause(InputAction.CallbackContext obj)
     {
         if (isPaused)
@@ -35,7 +30,7 @@ public class PauseManager : MonoBehaviour
             PauseGame();
     }
 
-    // Pause the game: show the pause menu and freeze time
+    // Function to pause the game to show pause menu and freeze time
     public void PauseGame()
     {
         playerMovement.SetActive(false);
@@ -46,7 +41,7 @@ public class PauseManager : MonoBehaviour
         isPaused = true;
     }
 
-    // Resume the game: hide menus and unfreeze time
+    // Function to resume the game and unfreeze time
     public void ResumeGame()
     {
         playerMovement.SetActive(true);
@@ -73,7 +68,7 @@ public class PauseManager : MonoBehaviour
     // Called by the Quit button in the pause menu
     public void QuitButton()
     {
-        // Before quitting, resume time scale to avoid freezing in the editor.
+        // Reset the state of game before quit
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("MainScene_DialogueCompleted", 0);
         PlayerPrefs.Save();

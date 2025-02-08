@@ -14,7 +14,7 @@ public class MainSceneStateManager : MonoBehaviour
 
     private void Update()
     {
-
+        // Show a reminder to player if there did not know what to do after a time
         if (PlayerPrefs.GetInt("MainScene_DialogueCompleted", 0) == 1)
         {
             timerRunning = true;
@@ -35,7 +35,7 @@ public class MainSceneStateManager : MonoBehaviour
 
     }
 
-    // Call this method before leaving MainScene (e.g., when pressing a button to load Scene2)
+    // Function to save the last postion of player in Main Scene
     public void SaveState()
     {
         // Save player's position.
@@ -44,7 +44,7 @@ public class MainSceneStateManager : MonoBehaviour
         PlayerPrefs.SetFloat("MainScene_PlayerPosY", pos.y);
         PlayerPrefs.SetFloat("MainScene_PlayerPosZ", pos.z);
 
-        // Save immediately to disk.
+        // Save data
         PlayerPrefs.Save();
     }
 
