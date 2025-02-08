@@ -12,12 +12,13 @@ public class walking_sound : MonoBehaviour
 
     private void Update()
     {
+        // Detect the input or release of locomotion button
         locomotionButton.action.performed += LocomotionStay;
         locomotionButton.action.canceled += LocomotionCanceled;
     }
 
 
-
+    // Play walk sound when walking
     private void LocomotionStay(InputAction.CallbackContext context)
     {
         if (isCanWalk.activeSelf)
@@ -29,6 +30,7 @@ public class walking_sound : MonoBehaviour
         }
     }
 
+    // Stop walk sound when stop walking
     private void LocomotionCanceled(InputAction.CallbackContext context)
     {
         if (walkSound.isPlaying)

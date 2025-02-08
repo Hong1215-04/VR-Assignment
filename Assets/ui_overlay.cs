@@ -9,15 +9,11 @@ public class ui_overlay : MonoBehaviour
     [SerializeField] private float distanceFromCamera = 1.5f;
     [SerializeField] private Vector3 offset = new Vector3(0, 0.5f, 0);
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     private void Update()
     {
+        //Move the UI in front of camera make it like overlay UI
         Vector3 targetPosition = vrCamera.position + vrCamera.forward * distanceFromCamera + offset;
         transform.position = targetPosition;
         transform.rotation = Quaternion.LookRotation(transform.position - vrCamera.position);

@@ -9,6 +9,7 @@ public class ui_manager : MonoBehaviour
     [SerializeField] private GameObject settingScreenCanvas;
     [SerializeField] private GameObject creditScreenCanvas;
 
+    // Show Setting Screen
     public void ShowSettingScreen()
     {
         titleScreenCanvas.SetActive(false);
@@ -17,6 +18,7 @@ public class ui_manager : MonoBehaviour
         
     }
 
+    // Show Title Screen
     public void ShowTitleScreen()
     {
         settingScreenCanvas.SetActive(false);
@@ -25,6 +27,7 @@ public class ui_manager : MonoBehaviour
 
     }
 
+    // Show Credit Screen
     public void ShowCreditScreen()
     {
         settingScreenCanvas.SetActive(false);

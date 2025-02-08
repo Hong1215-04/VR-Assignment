@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class scrip : MonoBehaviour
 {
-    [SerializeField] private Material[] stainMaterials;
-    [SerializeField] private int cleaningSteps = 3;
+    [SerializeField] private Material[] stainMaterials; // Array of materials in different stage
+    [SerializeField] private int cleaningSteps = 3; 
     private int currentStep = 0;
-    private Renderer stainRenderer;
+    private Renderer stainRenderer; // Reference to object to change the material
     public ParticleSystem Bubble;
 
     // Start is called before the first frame update
     void Start()
     {
         stainRenderer = GetComponent<Renderer>();
+        // Check if at least has one material
         if (stainMaterials.Length > 0)
             stainRenderer.material = stainMaterials[0];
         else
@@ -35,9 +36,9 @@ public class scrip : MonoBehaviour
             else if (currentStep >= cleaningSteps)
             {
                 currentStep = 0;
-                Destroy(gameObject);
-                
-                // **清理完成，通知 GameProgressManager**
+                Destroy(gameObject); // Remove stain
+
+                // Pass to GameProgressManager when stain cleaned
                 GameProgressManager.Instance.CleanStain();
             }
         }
