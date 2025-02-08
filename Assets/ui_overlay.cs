@@ -5,9 +5,9 @@ using UnityEngine;
 public class ui_overlay : MonoBehaviour
 {
 
-    [SerializeField] private Transform vrCamera; // Assign the VR camera in the Inspector
-    [SerializeField] private float distanceFromCamera = 1.5f;
-    [SerializeField] private Vector3 offset = new Vector3(0, 0.5f, 0);
+    [SerializeField] private Transform vrCamera; 
+    [SerializeField] private float distanceFromCamera;
+    [SerializeField] private Vector3 offset;
 
 
     // Update is called once per frame
