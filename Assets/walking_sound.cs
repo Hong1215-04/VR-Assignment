@@ -16,6 +16,8 @@ public class walking_sound : MonoBehaviour
         locomotionButton.action.canceled += LocomotionCanceled;
     }
 
+
+
     private void LocomotionStay(InputAction.CallbackContext context)
     {
         if (isCanWalk.activeSelf)
