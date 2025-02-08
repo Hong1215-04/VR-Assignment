@@ -692,7 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 6640002710935096923}
   m_TransformationPriority: 0
-  m_MoveSpeed: 4
+  m_MoveSpeed: 5
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Mediator: {fileID: 6640002710935096923}
   m_TransformationPriority: 0
   m_TurnAmount: 22.5
-  m_DebounceTime: 0.5
+  m_DebounceTime: 0.2
   m_EnableTurnLeftRight: 1
   m_EnableTurnAround: 1
   m_DelayTime: 0
@@ -1458,7 +1458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: {fileID: 5608426078181738906}
 --- !u!114 &7399425242140339816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1488,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1.5
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2099,7 +2098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4656615921016796017, guid: b1b19e6340809c4468d1ff0ec673379f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2420,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420737965983318110, guid: a3ed4067caf456a41bb4071ea2b6ceee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
