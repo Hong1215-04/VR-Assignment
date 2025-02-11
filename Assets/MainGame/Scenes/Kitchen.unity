@@ -188320,7 +188320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6920443550544235903, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9072523
+      value: 7.026
       objectReference: {fileID: 0}
     - target: {fileID: 6920443550544235903, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_LocalPosition.y
@@ -188328,7 +188328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6920443550544235903, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.497346
+      value: -12.328
       objectReference: {fileID: 0}
     - target: {fileID: 6920443550544235903, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_LocalRotation.w
@@ -304455,22 +304455,6 @@ PrefabInstance:
     - target: {fileID: 2014146910149058029, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
       propertyPath: m_Name
       value: Cockroach
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978309693010226215, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-      propertyPath: killingAudio
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.6079658
-      objectReference: {fileID: 0}
-    - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
       propertyPath: m_LocalPosition.x
