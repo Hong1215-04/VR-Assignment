@@ -29312,7 +29312,7 @@ GameObject:
   - component: {fileID: 210308842}
   - component: {fileID: 210308843}
   - component: {fileID: 210308844}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45699,6 +45699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Straw_A
       objectReference: {fileID: 0}
+    - target: {fileID: 3773511649294684620, guid: 61bd010cae576e04dabb8294104eacaa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48092,6 +48096,10 @@ PrefabInstance:
     - target: {fileID: 5974963334081866324, guid: 6b8342fdca04e8e43bf356dc10e6dfdd, type: 3}
       propertyPath: m_Name
       value: Can_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974963334081866324, guid: 6b8342fdca04e8e43bf356dc10e6dfdd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7744750917492998179, guid: 6b8342fdca04e8e43bf356dc10e6dfdd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54294,6 +54302,10 @@ PrefabInstance:
     - target: {fileID: 4525115776035476759, guid: f011df8f27921274fa5f27721ba445f1, type: 3}
       propertyPath: m_Name
       value: Paper_Bag_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525115776035476759, guid: f011df8f27921274fa5f27721ba445f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7247452307577540409, guid: f011df8f27921274fa5f27721ba445f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -110271,7 +110283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2170178008488602006, guid: 509ac6312e62e5743ae96298947599f7, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8128322320853617336, guid: 509ac6312e62e5743ae96298947599f7, type: 3}
       propertyPath: m_RootOrder
@@ -139023,6 +139035,10 @@ PrefabInstance:
     - target: {fileID: 5267770918887332322, guid: f4d3dd2462b163c40b2deb2c51778076, type: 3}
       propertyPath: m_Name
       value: Plastic_Bag_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267770918887332322, guid: f4d3dd2462b163c40b2deb2c51778076, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6520992062910203970, guid: f4d3dd2462b163c40b2deb2c51778076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -178501,6 +178517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pieces_of_paper_D
       objectReference: {fileID: 0}
+    - target: {fileID: 5592598478495512135, guid: 9a73f87b95c6df346ab0adb1095f1731, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5870639827051035158, guid: 9a73f87b95c6df346ab0adb1095f1731, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.784
@@ -184103,7 +184123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8846254054651317367, guid: d5e6d6c320e44bf49b4a2764e8561899, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.763
+      value: 6.936
       objectReference: {fileID: 0}
     - target: {fileID: 8846254054651317367, guid: d5e6d6c320e44bf49b4a2764e8561899, type: 3}
       propertyPath: m_LocalPosition.y
@@ -188293,6 +188313,10 @@ PrefabInstance:
     - target: {fileID: 3780354146070728779, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_Name
       value: Bottle_F
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780354146070728779, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6920443550544235903, guid: fca0aba20347e21458d5c9c08fd92d85, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199056,6 +199080,10 @@ PrefabInstance:
     - target: {fileID: 7827201955138443155, guid: 967e2ec0b2159b54d90e708806f70378, type: 3}
       propertyPath: m_Name
       value: Bottle_D
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827201955138443155, guid: 967e2ec0b2159b54d90e708806f70378, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -241873,6 +241901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cigarette_A
       objectReference: {fileID: 0}
+    - target: {fileID: 5708580954738521505, guid: fef61de5467c7ea478c11059ec4133c8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -260598,6 +260630,10 @@ PrefabInstance:
     - target: {fileID: 8108967826969197346, guid: 0805bab24dbebe64e97828abc8b4448b, type: 3}
       propertyPath: m_Name
       value: Glass_Bottle_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108967826969197346, guid: 0805bab24dbebe64e97828abc8b4448b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -283075,6 +283111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pieces_of_paper_B
       objectReference: {fileID: 0}
+    - target: {fileID: 7685275738186155052, guid: 149f276c6dc7eb0408c020e2a0ea8971, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -284898,6 +284938,10 @@ PrefabInstance:
     - target: {fileID: 3554868739997370724, guid: 9e00171fbe1ea2c409066b09c3f5cc97, type: 3}
       propertyPath: m_Name
       value: Coffee_Cup_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554868739997370724, guid: 9e00171fbe1ea2c409066b09c3f5cc97, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7283166720644280517, guid: 9e00171fbe1ea2c409066b09c3f5cc97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -300534,6 +300578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat
       objectReference: {fileID: 0}
+    - target: {fileID: 8213477909495301579, guid: 77bd978bc02bd8145876326638f2420f, type: 3}
+      propertyPath: m_WalkableMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8311438633488734403, guid: 77bd978bc02bd8145876326638f2420f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.897
@@ -304411,7 +304459,7 @@ PrefabInstance:
     - target: {fileID: 5978309693010226215, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
       propertyPath: killingAudio
       value: 
-      objectReference: {fileID: 9070540896509803177}
+      objectReference: {fileID: 0}
     - target: {fileID: 8480624456207072401, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -304467,112 +304515,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2014146910149058029, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9070540896509803177}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
---- !u!1 &9070540896509803176 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2014146910149058029, guid: e3bb367387d3ea647b6154fbeee2462e, type: 3}
-  m_PrefabInstance: {fileID: 9070540896509803175}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &9070540896509803177
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9070540896509803176}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -4305313246471877585, guid: 8478521a1522cf5478139dce76dd86c0, type: 2}
-  m_audioClip: {fileID: 8300000, guid: c742a074f09a57843abd829a9ed880d0, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
