@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1803545553}
+    - target: {fileID: 3407627473582477605, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 441087507}
     - target: {fileID: 5450045770703221864, guid: 8ae90dd0e1463d34dbe933cb45ed9f78, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.049999997
@@ -1166,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 6640002710935096923, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: walk
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 441087508}
     - target: {fileID: 6675852356006095502, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1197,6 +1201,11 @@ PrefabInstance:
 --- !u!1 &441087507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 58445280694286476, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &441087508 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5608426078181738906, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &517079165
